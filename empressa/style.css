@@ -35,13 +35,6 @@ body{
     background: rgb(19, 4, 83);
 }
 
-.conjuntos{
-    display: flex;
-    margin: auto;
-    background: black;
-    gap: 100px;
-}
-
 .vitrine{
     background:rgb(19, 18, 18);;
     display: flex;
@@ -51,54 +44,65 @@ body{
     width: 300px;
     display: flex;
     border-radius: 8px;
-    margin: 30px 100px 20px;
+    margin: 30px 95px 20px;
 }
 
-.vitrine hr{
-    background: rgba(0, 0, 0, 0.466);
-    width: 650px;
-    border: 6px rgba(0, 0, 0, 0.548) solid;
-    border-radius: 5pc;
-
+.vitrine > a:hover{
+    background: #00000044;
 }
 
-#caixa{
-    background: rgb(19, 18, 18);;
-    width: auto;
-    height: 190px;
-    margin-top: 40px;
-  
-}
-
-.recomendados h1{
-    background-color: rgb(54, 28, 199);
-    width: 200px;
-    margin: auto;
-    font-family:cursive;
-    border: 2px solid white;
+h1{
+    font-size: 4em;
+    font-family: monospace;
     text-align: center;
-    border-radius: 2pc;
-    padding:3px;
-}
-
-.roupasrecomendadas{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap ;
-    width: 800px;
+    color: rgba(0, 0, 0, 0.932);
+    width: 250px;
     margin: auto;
-    background: rgb(66, 66, 66);
+    margin-top: 30px;
+}
+
+.recomendados{
+    background: black;
+    display: flex;
+    margin: auto;
+    padding: 20px;
+}
+
+.recomendados img{
+    max-width: 200px;
+    min-height: 50px;
+    flex-wrap: wrap;
+    margin: 10px 30px 40px;
+}
+
+.recomendados nav{
+    display: flex;
+    background: rgb(82, 79, 79);
+    border:4px solid rgba(248, 248, 248, 0.411);
     border-radius: 5px;
-    border: 2px  solid white;
+    width: 900px;
+    margin: auto;
+    padding: 40px;
+    overflow-x: auto;
+}
+.recomendados div{
+    display: flex;
+    flex-wrap: nowrap;
 }
 
-.roupasrecomendadas img{
-    border-radius: 14px;
-    margin: 40px 10px 100px;
-    max-width: 250px;
-    display: block;
+
+/* Chrome, Edge, Opera */
+.recomendados nav::-webkit-scrollbar {
+    width: 5px; /* largura da barra */
 }
 
-.roupasrecomendadas a:active{
-    background: lightskyblue;
+.recomendados nav::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 2pc;
 }
+
+.recomendados nav::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 35px;
+}
+

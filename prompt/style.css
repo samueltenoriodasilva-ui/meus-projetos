@@ -1,0 +1,110 @@
+/* Variáveis globais */
+:root {
+  --bg-body: #121212;
+  --bg-chat: #1e1e1e;
+  --bg-bot: #333;
+  --bg-user: #4e8ef7;
+  --bg-input: #2a2a2a;
+  --bg-button: #d8dee6;
+  --bg-button-hover: #3573e0;
+
+  --text-bot: #eee;
+  --text-user: #fff;
+  --text-button: #0a0909;
+
+  --spacing-small: 5px;
+  --spacing-medium: 10px;
+  --spacing-large: 15px;
+
+  --border-radius: 12px;
+  --line-height: 1.5;
+}
+
+/* Reset e body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--bg-body);
+  color: var(--text-user);
+}
+
+/* Área do histórico */
+.chat-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-large);
+  background: var(--bg-chat);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium); /* espaçamento entre mensagens */
+}
+
+/* Mensagens */
+.message {
+  display: inline-block;
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius);
+  max-width: 70%;
+  word-wrap: break-word;
+  line-height: var(--line-height);
+}
+
+/* Mensagem do usuário */
+.user {
+  background: var(--bg-user);
+  color: var(--text-user);
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Mensagem do bot */
+.bot {
+  background: var(--bg-bot);
+  color: var(--text-bot);
+  margin-right: auto;
+  text-align: left;
+}
+
+/* Linha separadora */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #444;
+  margin: var(--spacing-small) 0 var(--spacing-medium) 0;
+}
+
+/* Barra de interação */
+.input-bar {
+  display: flex;
+  padding: var(--spacing-medium);
+  background: var(--bg-chat);
+  border-top: 1px solid #444;
+  gap: var(--spacing-small);
+}
+
+.input-bar input {
+  flex: 1;
+  padding: var(--spacing-medium);
+  background: var(--bg-input);
+  color: var(--text-user);
+  border: 1px solid #555;
+  border-radius: 8px;
+  outline: none;
+}
+
+.input-bar button {
+  padding: var(--spacing-medium) var(--spacing-large);
+  background: var(--bg-button);
+  color: var(--text-button);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.input-bar button:hover {
+  background: var(--bg-button-hover);
+}

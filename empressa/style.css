@@ -1,0 +1,130 @@
+body, ul, li, p{
+    padding: 0px;
+    margin:0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+    background: rgb(19, 18, 18);;
+}
+
+.logo a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.logo{
+    background-color: rgb(0, 0, 0);
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu{
+    display: flex;
+}
+
+#especial{
+    border-left:2px solid white ;
+    border-right:2px solid white ;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px;
+    background: rgb(19, 4, 83);
+}
+
+.conjuntos{
+   /* list-style: nome;
+    display: flex;
+    gap: 100px;
+    margin-left: 25px;
+    padding: 0;
+    background-color: aqua;
+    */
+
+    display: flex;
+    margin: auto;
+    background: black;
+    gap: 100px;
+}
+
+.vitrine{
+    background:rgb(19, 18, 18);;
+    display: flex;
+}
+
+.vitrine > a:hover{
+    background: rgb(3, 75, 148);
+}
+
+.vitrine img{
+    width: 300px;
+    display: flex;
+    border-radius: 8px;
+    border: 2px solid;
+    margin: 30px 100px 20px;
+}
+
+.vitrine hr{
+    background: rgba(0, 0, 0, 0.466);
+    width: 650px;
+    border: 6px rgba(0, 0, 0, 0.548) solid;
+    border-radius: 5pc;
+
+}
+
+#caixa{
+    background: rgb(19, 18, 18);;
+    width: auto;
+    height: 190px;
+    margin-top: 40px;
+  
+}
+
+.recomendados h1{
+    background-color: rgb(54, 28, 199);
+    width: 200px;
+    margin: auto;
+    font-family:cursive;
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 2pc;
+    padding:3px;
+}
+
+/*{
+    color: aliceblue;
+    width: 200px;
+    margin: auto;
+    font-family:cursive;
+    font-weight: bolder;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 2pc;
+    padding:3px;
+}*/
+
+.roupasrecomendadas{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap ;
+    width: 800px;
+    margin: auto;
+    background: rgb(66, 66, 66);
+    border-radius: 5px;
+    border: 2px  solid white;
+}
+
+.roupasrecomendadas img{
+    border-radius: 14px;
+    margin: 40px 10px 100px;
+    max-width: 250px;
+    display: block;
+}
+
+.roupasrecomendadas a:active{
+    background: lightskyblue;
+}

@@ -1,15 +1,18 @@
-body, ul, li, p{
+body{
     padding: 0px;
     margin:0px;
-    list-style: none;
     font-size: 1.2rem;
     font-family: Arial;
-    background: rgb(19, 18, 18);;
 }
 
 .logo a{
     text-decoration: none;
     color: aliceblue;
+    margin-left: 25px;
+}
+
+.logo a:hover{
+    background: rgba(121, 125, 126, 0.274);
 }
 
 .logo{
@@ -23,11 +26,7 @@ body, ul, li, p{
 
 .menu{
     display: flex;
-}
-
-#especial{
-    border-left:2px solid white ;
-    border-right:2px solid white ;
+    list-style: none;
 }
 
 .menu li a{
@@ -37,14 +36,6 @@ body, ul, li, p{
 }
 
 .conjuntos{
-   /* list-style: nome;
-    display: flex;
-    gap: 100px;
-    margin-left: 25px;
-    padding: 0;
-    background-color: aqua;
-    */
-
     display: flex;
     margin: auto;
     background: black;
@@ -56,15 +47,10 @@ body, ul, li, p{
     display: flex;
 }
 
-.vitrine > a:hover{
-    background: rgb(3, 75, 148);
-}
-
 .vitrine img{
     width: 300px;
     display: flex;
     border-radius: 8px;
-    border: 2px solid;
     margin: 30px 100px 20px;
 }
 
@@ -94,18 +80,6 @@ body, ul, li, p{
     border-radius: 2pc;
     padding:3px;
 }
-
-/*{
-    color: aliceblue;
-    width: 200px;
-    margin: auto;
-    font-family:cursive;
-    font-weight: bolder;
-    font-size: 2em;
-    text-align: center;
-    border-radius: 2pc;
-    padding:3px;
-}*/
 
 .roupasrecomendadas{
     display:flex;

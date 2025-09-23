@@ -3,6 +3,7 @@ body{
     margin:0px;
     font-size: 1.2rem;
     font-family: Arial;
+    background:rgb(19, 18, 18);
 }
 
 .logo a{
@@ -52,17 +53,19 @@ body{
 }
 
 h1{
-    font-size: 4em;
-    font-family: monospace;
+    font-size: 4.3em;
+    font-family: "Oooh Baby", cursive;
+    font-weight: 450px;
+    font-style: normal;
     text-align: center;
-    color: rgba(0, 0, 0, 0.932);
+    color: rgb(255, 249, 249);
     width: 250px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 100px;
 }
 
 .recomendados{
-    background: black;
+    background:rgb(19, 18, 18);;
     display: flex;
     margin: auto;
     padding: 20px;
@@ -89,7 +92,6 @@ h1{
     display: flex;
     flex-wrap: nowrap;
 }
-
 
 /* Chrome, Edge, Opera */
 .recomendados nav::-webkit-scrollbar {

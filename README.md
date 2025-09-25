@@ -1,7 +1,31 @@
-# 🌐 Meus Sites no GitHub Pages
+# 🌐 Meus Projetos no GitHub Pages
 
-- [💼 Empressa](https://samueltenoriodasilva-ui.github.io/empressa/)
-- [🎮 Kaka](https://samueltenoriodasilva-ui.github.io/kaka/)
-- [⚡ Prompt](https://samueltenoriodasilva-ui.github.io/prompt/)
-- [🏷️ TAGS](https://samueltenoriodasilva-ui.github.io/TAGS/)
-- [📂 Projetos](https://samueltenoriodasilva-ui.github.io/projetos/)
+Bem-vindo(a) ao repositório **meus-projetos**! 🚀  
+Aqui estão alguns dos meus sites e testes hospedados gratuitamente no **GitHub Pages**.
+
+---
+
+## 🔗 Acesse os Sites
+
+- 🏢 [**Empressa**](https://samueltenoriodasilva-ui.github.io/meus-projetos/empressa/)
+- 🎮 [**Kaka**](https://samueltenoriodasilva-ui.github.io/meus-projetos/kaka/)
+- ⚡ [**Prompt**](https://samueltenoriodasilva-ui.github.io/meus-projetos/prompt/)
+- 🏷️ [**TAGS**](https://samueltenoriodasilva-ui.github.io/meus-projetos/TAGS/)
+- 📂 [**Projetos**](https://samueltenoriodasilva-ui.github.io/meus-projetos/projetos/)
+
+---
+
+## 📌 Sobre o Repositório
+Este repositório serve como um **portfólio de sites** criados com **HTML, CSS e JavaScript**, publicados através do **GitHub Pages**.
+
+---
+
+## ⚙️ Tecnologias Utilizadas
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+
+---
+
+## 📜 Licença
+Este projeto está sob a licença [MIT](LICENSE).

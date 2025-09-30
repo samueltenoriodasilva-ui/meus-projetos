@@ -142,3 +142,27 @@ body{
 .box2:hover{
     background-image: url(/empressa/fotos/ROUPA\ VERMELHA.webp);
 }
+
+.topo{
+    background: rgba(187, 198, 207, 0.863);
+    width: 30vw;
+    height: 95vh;
+    margin-right: 60px;
+}
+
+.produtos{
+    background-color:#ddd ;
+    margin: auto;
+    width: 100px;
+}
+
+.produtos img{
+    width: 250px;
+    margin: 70px;
+}
+
+.produtos > div{
+    background-color: aqua;
+    width: 850px;
+    margin: auto;
+}

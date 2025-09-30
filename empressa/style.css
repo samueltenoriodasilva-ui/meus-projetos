@@ -141,10 +141,12 @@ body{
 }
 
 .box1:hover{
+    transition: 0.9s;
     background-image: url(/empressa/fotos/CAMISA-AZUL.jpg);
 }
 
 .box2:hover{
+    transition: 0.9s;
     background-image: url(/empressa/fotos/ROUPA\ VERMELHA.webp);
 }
 

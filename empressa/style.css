@@ -92,6 +92,11 @@ body{
     flex-wrap: nowrap;
 }
 
+.recomendados img:hover{
+    transition: 0.3s;
+    transform: scale(1.3);
+}
+
 /* Chrome, Edge, Opera */
 .recomendados nav::-webkit-scrollbar {
     width: 5px; /* largura da barra */

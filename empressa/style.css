@@ -225,3 +225,49 @@ body.perfil{
     background-color: rgba(7, 6, 66, 0.692);
     text-align: center;
 }
+
+body.login{
+    background-image: url(/empressa/fotos/fundo-loguin.jpg);
+    background-repeat: no-repeat;  
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+    width: 500px;
+    height: 500px;
+}
+
+.formulario{
+   background-color: rgba(180, 185, 184, 0.692);
+   padding: 100px;
+   border-radius: 5px;
+   
+}
+
+.formulario > div{
+    margin-top: 10px;
+}
+
+form h1{
+    color: rgb(255, 254, 254);
+    padding: 10px;
+    margin: 0;
+}
+
+.formulario input{
+    width: 100px;
+    height: 20px;
+    border: none;
+}
+
+.formulario label{
+    font-size: 1em;
+    font-weight: bolder;
+}

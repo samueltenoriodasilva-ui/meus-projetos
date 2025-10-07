@@ -1,3 +1,6 @@
+
+/*html inicial*/
+
 body{
     padding: 0px;
     margin:0px;
@@ -37,14 +40,15 @@ body{
 }
 
 .vitrine{
-    background:rgb(19, 18, 18);
-    display: flex;
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 100vw;
 }
 
 .vitrine img{
     width: 300px;
     border-radius: 8px;
-    margin: 30px 95px 20px;
+    margin: 30px 105px 20px;
 }
 
 .vitrine > a:hover{
@@ -97,7 +101,6 @@ body{
     transform: scale(1.3);
 }
 
-/* Chrome, Edge, Opera */
 .recomendados nav::-webkit-scrollbar {
     width: 5px; /* largura da barra */
 }
@@ -226,11 +229,14 @@ body.perfil{
     text-align: center;
 }
 
+/* html login*/
+
 body.login{
-    background-image: url(/empressa/fotos/fundo-loguin.jpg);
+    background-image: url(fotos/fundo-loguin.jpg);
     background-repeat: no-repeat;  
     background-size: 100vw 100vh;
     background-attachment: fixed;
+    background-position: center center;
 }
 
 form{

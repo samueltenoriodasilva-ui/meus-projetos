@@ -124,7 +124,7 @@ body{
 .box1{
     background-color: rgb(255, 255, 255);
     width: 70vh;
-    background-image: url(fotos/camiseta-branca.webp);
+    background-image: url(../fotos/camiseta-branca.webp);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center center;
@@ -135,7 +135,7 @@ body{
 .box2{
     background-color: rgb(0, 0, 0) ;
     width: 70vh;
-    background-image: url(fotos/roupa-preta.webp);
+    background-image: url(../fotos/roupa-preta.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -145,12 +145,12 @@ body{
 
 .box1:hover{
     transition: 0.9s;
-    background-image: url(fotos/CAMISA-AZUL.jpg);
+    background-image: url(../fotos/CAMISA-AZUL.jpg);
 }
 
 .box2:hover{
     transition: 0.9s;
-    background-image: url(fotos/ROUPA\ VERMELHA.webp);
+    background-image: url(../fotos/ROUPA\ VERMELHA.webp);
 }
 
 /* html produtos*/

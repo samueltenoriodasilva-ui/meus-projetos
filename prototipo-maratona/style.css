@@ -1,0 +1,117 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.cabecario {
+    text-align: center;
+    padding: 5px;
+    background-color: blueviolet;
+}
+
+.cabecario a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.cabecario ul{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    gap: 40px;
+    padding: 10px;
+    list-style: none;
+    font-size: 1.3em;
+    margin-top: 10px;
+}
+
+.cabecario li{
+    background-color:rgb(36, 67, 209) ;
+    padding: 5px;
+    border-radius: 2pc;
+}
+
+.conteudo section{
+    background-color: bisque;
+    width: 80vw;
+    height: 40vh;
+    margin: auto;
+    margin-top: 70px;
+    border-radius: 4px;
+}
+
+footer{
+    background-color: rgb(77, 77, 216);
+    margin-top: 100px;
+    height: 10vh;
+    color: aliceblue;
+    text-align: center;
+}
+
+footer p{
+   
+}
+
+/* html curso*/
+body.curso{
+    padding: 0;
+    margin: 0;
+}
+
+.curso header{
+    background-color: brown;
+    text-align: center;
+    padding: 10px;
+    color: aliceblue;
+}
+
+.curso header img, a{
+    display: flex;
+    color: black;
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+.curso header h1{
+    font-size: 3.3em;
+    color:black ;
+}
+
+.curso main{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.curso main h2{
+    font-size: 2em;
+
+}
+
+.curso main p{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    border-bottom: solid rgb(80, 82, 81);
+}
+
+.curso main section{
+    background-color: bisque;
+    width: 90vw;
+    height: 70vh;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.curso main section p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    border-bottom: solid rgb(80, 82, 81);
+    width: 250px;
+    margin: auto;
+    padding: 10px;
+}

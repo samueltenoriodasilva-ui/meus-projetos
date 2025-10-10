@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cursos</title>
+</head>
+<body class="curso">
+    <header>
+        <h1>cursos</h1>
+        <a href="index.html"><img src="imagens/seta.png" alt="" width="20px">Voltar</a>
+    </header>
+
+    <main>
+        <h2>Meus Cursos</h2>
+        <p>Aqui voce podera selecionar os cursos que vc esta estudando</p>
+
+        <section>
+            <p>Escolha seus cursos</p>
+    
+            <!-- Input para adicionar curso -->
+            <input type="text" name="curso" id="icurso" placeholder="Nome do curso">
+            <input type="submit" value="Adicionar Curso">
+
+            <!-- Dropdown para escolher curso ao adicionar tópico -->
+            <select id="selectCursoParaTopico">
+                <option value="" disabled selected>Escolha o curso</option>
+                <option value="matematica">Matemática</option>
+                <option value="fisica">Física</option>
+                <option value="htmlcss">Engenharia</option>
+            </select>
+
+            <!-- Input para adicionar tópico -->
+            <input type="text" name="topico" id="itopico" placeholder="Nome do  tópico">
+            <input type="submit" value="Adicionar Tópico">
+
+            <!-- Checkbox para marcar tópico como concluído -->
+            <label>
+                <input type="checkbox" name="concluido" id="checkTopico"> Tópico concluído
+            </label>
+        </section>
+
+        <script src="script.js"></script>
+
+    </main>
+</body>
+</html>

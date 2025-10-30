@@ -42,3 +42,82 @@
 @media screen and (min-width:1281px) and (max-width:1600px) {
 
 }
+
+/*medias formularios*/
+
+/*@media (max-width: 600px) { ... }     /* Mobile */
+/* (min-width: 768px) { ... }     /* Tablet */
+/* (min-width: 1024px) { ... }    /* Laptop */
+/*(min-width: 1280px) { ... }    /* Desktop */
+/*(min-width: 1536px) { ... }    /* Monitores grandes */
+/*---------------------------------------------------------*/
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    section#login{
+        width: 750px;
+        height: 400px;
+    }
+
+    #imagem{
+        float: left;
+        width: 30%;
+        height: 100%;
+        
+    }
+
+    #formulario{
+        float:right;
+        width: 65%;
+        height: 100%;
+    }
+
+    .enviar{
+        margin-left: 35px;
+    }
+
+    .enviar a {
+        font-size: 15.6px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+
+    section#login{
+        width: 950px;
+        height: 600px;
+    }
+
+    #imagem{
+        float: right;
+        width: 50%;
+        height: 100%;
+        
+    }
+
+    #formulario{
+        float:left;
+        width: 46%;
+        height: 100%;
+    }
+
+    #formulario > h1{
+        font-size: 5em;
+        color: rgb(14, 14, 14);
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.404);
+    }
+
+    #formulario p{
+        font-size: 1.6em;
+        color: rgb(17, 17, 17);
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.356);
+    }
+
+    .enviar{
+        margin-left: 15px;
+    }
+
+    .enviar a{
+        font-size: 15.6px;
+    }
+}

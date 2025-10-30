@@ -5,40 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo/style.css">
     <link rel="stylesheet" href="estilo/media.css">
-    <title>formulario</title>
-</head>
-<body class="login">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     
-    <form action="#" method="post">
-        <h1>Faça seu cadastro aqui</h1>
-        <section class="formulario">
+    <title>login simples</title>
+</head>
+<body id="login">
+    <main>
+        <section id="login">
+            <div id="imagem">
+                
+            </div>
+            <div id="formulario">
 
+                <h1>login</h1>
 
-            <div id="caixa">
-                <div>
-                    <label for="inome">Nome</label>
-                    <input type="text" name="nome" id="inome" placeholder="Nome completo"><br>
+                <p>aqui você conseguira realizaaar seu cadastro</p>
+
+                <form action="login.php" method="post"></form>
+
+                <div class="campo">
+                    <span class="material-symbols-outlined">mail</span>
+                    <label for="iemail"></label>
+                    <input type="email" name="email" id="iemail" placeholder="coloque seu E-mail" required autocomplete>
+                    
                 </div>
-                
-                <div>
-                    <label for="iemail">Email</label>
-                    <input type="email" name="email" id="iemail" placeholder=" Coloque o email"><br>
+
+                <div class="campo">
+                    <span class="material-symbols-outlined">lock</span>
+                    <label for="isenha"></label>
+                    <input type="password" name="senha" id="isenha" placeholder="coloque sua senha" required maxlength="8" autocomplete><br>
                 </div>
-                
-                <div>
-                    <label for="isenha">Senha</label>
-                    <input type="password" name="senha" id="isenha" placeholder="mim 8 digitos" minlength="8"><br>
-                </div>
-                
-                <div id="boder">
-                    <button type="submit">Enviar</button><br>
+
+                <div class="enviar">
+                    <input type="submit" value="enviar">
+                    <a href="/">esqueci minha senha</a>
                 </div>
             </div>
         </section>
-
-    </form>
-    
+    </main>
     
 </body>
 </html>

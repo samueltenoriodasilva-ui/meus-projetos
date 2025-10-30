@@ -8,10 +8,17 @@
         font-size: 1.4em;
     }
 
-    .vitrine img{
-        width: 150px;
-        flex-wrap: nowrap;
-        margin: 70px 0px 0px 30px;
+    div.teste2{
+    background-color: aquamarine;
+    background-image: url(../fotos/camisa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+    width: 100px;
+    height: 300px;
+    margin: 40px;
+    flex: 1 0 100px;
     }
 
     .recomendados nav{

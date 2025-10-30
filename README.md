@@ -15,6 +15,7 @@ Aqui estão alguns dos meus sites e testes hospedados gratuitamente no **GitHub 
 
 -  [**Matratona**](https://samueltenoriodasilva-ui.github.io/meus-projetos/prototipo-maratona/)
 
+-  [**Projeto-decadas**](https://samueltenoriodasilva-ui.github.io/meus-projetos/projeto-decadas/)
 ---
 
 ## 📌 Sobre o Repositório

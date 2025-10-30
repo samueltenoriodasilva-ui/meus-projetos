@@ -6,7 +6,19 @@
 <title>Brasil 1960 a 1980 – Jornal Impresso A4</title>
 <style>
     /* Configuração para impressão A4 */
+
+    @media print {
+    h2 {
+        font-size: 2em;
+    }
+
+    p, ul {
+        font-size: 1.3em;
+    }
+}
+
     @page {
+        
         size: A4;
         margin: 20mm 15mm 20mm 15mm;
     }
@@ -150,7 +162,7 @@
     </div>
 
     <footer>
-    Página jornalística educativa sobre o Brasil 1960-1980 | Conteúdo histórico ilustrativo
+    Página jornalística educativa sobre o Brasil 1960-1980 | Conteúdo histórico ilustrativo Feito por <strong>Samuel Tenório</strong>
     </footer>
 </div>
 

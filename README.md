@@ -16,9 +16,8 @@ Aqui estão alguns dos meus sites e testes hospedados gratuitamente no **GitHub 
 -  [**Matratona**](https://samueltenoriodasilva-ui.github.io/meus-projetos/prototipo-maratona/)
 
 -  [**Projeto-decadas**](https://samueltenoriodasilva-ui.github.io/meus-projetos/projeto-decadas/)
----
 
- [**prato-tipico**](https://samueltenoriodasilva-ui.github.io/meus-projetos/prato-tipico/)
+- [**prato-tipico**](https://samueltenoriodasilva-ui.github.io/meus-projetos/prato-tipico/)
  ---
 
 ## 📌 Sobre o Repositório

@@ -20,6 +20,9 @@ Aqui estão alguns dos meus sites e testes hospedados gratuitamente no **GitHub 
 - [**prato-tipico**](https://samueltenoriodasilva-ui.github.io/meus-projetos/prato-tipico/)
  ---
 
+ - [**prato-tipico**](https://samueltenoriodasilva-ui.github.io/meus-projetos/politica/)
+ ---
+
 ## 📌 Sobre o Repositório
 Este repositório serve como um **portfólio de sites** criados com **HTML, CSS e JavaScript**, publicados através do **GitHub Pages**.
 

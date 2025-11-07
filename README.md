@@ -18,12 +18,12 @@ Aqui estão alguns dos meus sites e testes hospedados gratuitamente no **GitHub 
 -  [**Projeto-decadas**](https://samueltenoriodasilva-ui.github.io/meus-projetos/projeto-decadas/)
 
 - [**prato-tipico**](https://samueltenoriodasilva-ui.github.io/meus-projetos/prato-tipico/)
- ---
+
 
  - [**politica**](https://samueltenoriodasilva-ui.github.io/meus-projetos/politica/)
- ---
 
-- [**politica**](https://samueltenoriodasilva-ui.github.io/meus-projetos/esporte-musica/)
+
+- [**esporte-musica**](https://samueltenoriodasilva-ui.github.io/meus-projetos/esporte-musica/)
  ---
 
 ## 📌 Sobre o Repositório

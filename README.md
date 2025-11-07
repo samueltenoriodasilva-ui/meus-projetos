@@ -23,6 +23,9 @@ Aqui estão alguns dos meus sites e testes hospedados gratuitamente no **GitHub 
  - [**politica**](https://samueltenoriodasilva-ui.github.io/meus-projetos/politica/)
  ---
 
+- [**politica**](https://samueltenoriodasilva-ui.github.io/meus-projetos/esporte-musica/)
+ ---
+
 ## 📌 Sobre o Repositório
 Este repositório serve como um **portfólio de sites** criados com **HTML, CSS e JavaScript**, publicados através do **GitHub Pages**.
 

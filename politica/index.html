@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Escolar — Médici e Geisel (1969–1979)</title>
+    <style>
+        @charset "utf-8";
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 1.3;
+            font-size: 1.1em;
+            background-color: #000000;
+        }
+
+        .normal {
+            padding: 20px;
+        }
+
+        .flexisivel {
+            background-color: rgb(8, 99, 102);
+            padding: 20px;
+        }
+
+        h1, h2 {
+            font-size: 1.7em;
+            margin: 20px;
+            text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.404);
+            color: aliceblue;
+        }
+
+        p {
+            color:aliceblue ;
+            font-size: 1.2em;
+            text-align: justify;
+        }
+
+        img {
+            width: 550px;
+        }
+
+        section.flexisivel {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+
+        article.media-texto, article.texto-media {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        div.texto {
+            flex: 1 1 500px;
+            padding: 20px;
+        }
+
+        div.media {
+            flex: 1 0 500px;
+        }
+
+        div.media > img {
+            display: block;
+            width: 500px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.418);
+        }
+
+        div.media > iframe {
+            display: block;
+            margin: auto;
+            width: 90%;
+            margin: 20px;
+            border-radius: 30px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.418);
+        }
+    </style>
+</head>
+<body>
+    <header class="normal">
+        <h1>Jornal Escolar — Período Militar (1969–1979)</h1>
+        <p>Resumo informativo sobre os governos Médici e Geisel, para uso escolar.</p>
+    </header>
+
+    <section class="flexisivel">
+
+        <article class="media-texto">
+            <div class="texto">
+                <h2>Emílio Garrastazu Médici (1969–1974)</h2>
+                <p><strong>Economia:</strong> O governo Médici marcou o auge do “milagre econômico”. O país cresceu rapidamente com grandes obras e industrialização acelerada. Houve entrada de capital estrangeiro e expansão das cidades, mas também concentração de renda e aumento da desigualdade. A inflação foi controlada à custa de arrocho salarial e endividamento.</p>
+                <p><strong>Sociedade:</strong> Foi um dos períodos mais duros da repressão. Prisões, torturas e censura marcaram o cotidiano. Estudantes, artistas e opositores foram perseguidos. Apesar do crescimento econômico, muitos brasileiros viviam sob medo e pobreza crescente.</p>
+                <p><strong>Cultura:</strong> A censura atingiu músicas, peças e jornais. Mesmo assim, artistas encontraram formas de protesto simbólico, com metáforas e ironias. A televisão cresceu e se tornou o principal meio de informação, controlado pelo governo.</p>
+            </div>
+            <div class="media">
+                <img src="../politica/imagens/Presidente Médici.jpg" alt="Presidente Médici">
+            </div>
+        </article>
+
+        <article class="texto-media">
+            <div class="media">
+                <img src="../politica/imagens/Presidente Geisel.webp" alt="Presidente Geisel">
+            </div>
+            <div class="texto">
+                <h2>Ernesto Geisel (1974–1979)</h2>
+                <p><strong>Economia:</strong> Geisel herdou uma economia forte, mas começou a enfrentar dificuldades após a crise do petróleo e o aumento da dívida externa. O “milagre econômico” começou a dar sinais de esgotamento, e o governo tentou equilibrar o crescimento com planejamento e investimentos estatais.</p>
+                <p><strong>Sociedade:</strong> Durante seu governo iniciou-se a chamada “abertura política” ou <em>distensão lenta e gradual</em>. A repressão diminuiu, e parte da sociedade voltou a se mobilizar politicamente. Ainda assim, havia censura e vigilância constante.</p>
+                <p><strong>Cultura:</strong> A leve abertura política favoreceu o retorno de artistas e intelectuais ao debate público. A música e o cinema retomaram temas sociais, e o público começou a exigir mais liberdade e democracia. A televisão se consolidou como principal veículo de comunicação.</p>
+            </div>
+        </article>
+
+    </section>
+</body>
+</html>

@@ -83,6 +83,71 @@
             border-radius: 30px;
             box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.418);
         }
+
+        @media print {
+
+    /* Remove fundos escuros e coloca fundo branco */
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 12pt;
+    }
+
+    header, section, article, div {
+        background: #ffffff !important;
+        color: #000000 !important;
+        box-shadow: none !important;
+    }
+
+    /* Títulos pretos na impressão */
+    h1, h2 {
+        color: #000000 !important;
+        text-shadow: none !important;
+    }
+
+    /* Parágrafos mais fáceis de ler no papel */
+    p {
+        color: #000000 !important;
+        font-size: 12pt !important;
+    }
+
+    /* Centraliza jornal na folha */
+    @page {
+        size: A4;            /* Tamanho da folha */
+        margin: 15mm;        /* Margem padrão para não cortar nada */
+    }
+
+    /* Imagens ajustadas para impressão */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        page-break-inside: avoid;  /* evita cortar imagem no meio */
+    }
+
+    /* Layout mais limpo sem flex quebrando */
+    article.media-texto,
+    article.texto-media {
+        display: block !important;
+    }
+
+    /* Texto primeiro, imagem depois, evitando bagunça */
+    .media, .texto {
+        width: 100% !important;
+        padding: 10px !important;
+    }
+
+    /* Remove bordas arredondadas e sombras */
+    img, iframe {
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Remove elementos que não quer imprimir (se tiver no futuro) */
+    .no-print {
+        display: none !important;
+    }
+}
+
     </style>
 </head>
 <body>

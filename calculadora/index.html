@@ -191,7 +191,6 @@ function calcular() {
     let valorSelect = Number(document.getElementById("valorSelect").value);
     let valorManual = Number(document.getElementById("valorManual").value);
 
-    // Prioridade: valor manual
     let valorPT = valorManual > 0 ? valorManual : valorSelect;
 
     if (!qtd || !valorPT) {
@@ -199,12 +198,16 @@ function calcular() {
         return;
     }
 
-    // Cálculo dos materiais
+    // Materiais
     let metal = 150 * qtd;
     let cobre = 150 * qtd;
     let vidro = 175 * qtd;
     let plastico = 175 * qtd;
     let borracha = 175 * qtd;
+
+    // 🔫 NOVO – Peças por PT
+    let corpoPistola = 1 * qtd;
+    let pecaArmaLeve = 1 * qtd;
 
     let totalMateriais = 825 * qtd;
     let totalValor = valorPT * qtd;
@@ -220,7 +223,9 @@ function calcular() {
             Cobre: ${cobre}<br>
             Vidro: ${vidro}<br>
             Plástico: ${plastico}<br>
-            Borracha: ${borracha}<br><br>
+            Borracha: ${borracha}<br>
+            Corpo de Pistola: ${corpoPistola}<br>
+            Peça de Arma Leve: ${pecaArmaLeve}<br><br>
 
             <strong>🔢 Total de Materiais:</strong> ${totalMateriais}<br><br>
 
@@ -228,9 +233,10 @@ function calcular() {
             Valor Geral: R$ ${totalValor.toLocaleString("pt-BR")}<br><br>
 
             <strong>📊 Divisão do Valor</strong><br><br>
-            30%: R$ ${parte30.toLocaleString("pt-BR")}<br>
-            70%: R$ ${parte70.toLocaleString("pt-BR")}
+            Você (30%): R$ ${parte30.toLocaleString("pt-BR")}<br>
+            Facção (70%): R$ ${parte70.toLocaleString("pt-BR")}
         </div>
     `;
 }
 </script>
+

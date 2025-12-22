@@ -199,6 +199,7 @@ function calcular() {
         return;
     }
 
+    // Cálculo dos materiais
     let metal = 150 * qtd;
     let cobre = 150 * qtd;
     let vidro = 175 * qtd;
@@ -208,24 +209,28 @@ function calcular() {
     let totalMateriais = 825 * qtd;
     let totalValor = valorPT * qtd;
 
-    let voce = totalValor * 0.30;
-    let fac = totalValor * 0.70;
+    let parte30 = totalValor * 0.30;
+    let parte70 = totalValor * 0.70;
 
     document.getElementById("resultado").innerHTML = `
-        <strong>Materiais necessários</strong><br>
-        Metal: ${metal}<br>
-        Cobre: ${cobre}<br>
-        Vidro: ${vidro}<br>
-        Plástico: ${plastico}<br>
-        Borracha: ${borracha}<br>
-        <strong>Total:</strong> ${totalMateriais}<br><br>
+        <div style="line-height: 1.8;">
+            <strong>📦 Materiais Necessários</strong><br><br>
 
-        <strong>Valor total:</strong> ${totalValor}<br>
-        Você (30%): ${voce}<br>
-        Facção (70%): ${fac}
+            Metal: ${metal}<br>
+            Cobre: ${cobre}<br>
+            Vidro: ${vidro}<br>
+            Plástico: ${plastico}<br>
+            Borracha: ${borracha}<br><br>
+
+            <strong>🔢 Total de Materiais:</strong> ${totalMateriais}<br><br>
+
+            <strong>💰 Valor Total</strong><br><br>
+            Valor Geral: R$ ${totalValor.toLocaleString("pt-BR")}<br><br>
+
+            <strong>📊 Divisão do Valor</strong><br><br>
+            30%: R$ ${parte30.toLocaleString("pt-BR")}<br>
+            70%: R$ ${parte70.toLocaleString("pt-BR")}
+        </div>
     `;
 }
 </script>
-
-</body>
-</html>

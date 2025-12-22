@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <title>Calculadora PT</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        section#login {
+            background: #020617;
+            display: flex;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.6);
+        }
+
+        #imagem {
+    width: 50%;
+    background-color: #020617;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#imagem img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 12px;           /* bordas arredondadas leves */
+    box-shadow: 0 0 25px rgba(0,0,0,0.6); /* sombra suave */
+    background-color: #ffffff;     /* fundo branco pra destacar */
+    padding: 10px;
+}
+
+
+        #formulario {
+            width: 50%;
+            padding: 30px;
+            color: #e5e7eb;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .campo {
+            display: flex;
+            align-items: center;
+            background: #020617;
+            border: 1px solid #26313b;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            padding: 8px;
+        }
+
+        .campo span {
+            color: #22c55e;
+            margin-right: 8px;
+        }
+
+        .campo input, .campo select {
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #e5e7eb;
+            width: 100%;
+        }
+
+        .campo select option {
+            color: black;
+        }
+
+        .enviar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #22c55e;
+            color: #020617;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .enviar input:hover {
+            background: #16a34a;
+        }
+
+        .resultado {
+            margin-top: 20px;
+            background: #020617;
+            border: 1px solid #4d6072;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            section#login {
+                flex-direction: column;
+            }
+
+              #imagem {
+                 width: 100%;
+                 height: 200px;
+                background-size: contain;
+            }
+
+            #formulario {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <section id="login">
+        <div id="imagem">
+    <img src="https://image.spreadshirtmedia.net/image-server/v1/products/T1459A839PA4459PT28X0Y30D191412447W10000H4016Cx000000/views/1,width=1200,height=630,appearanceId=839,backgroundColor=F2F2F2/la-familia-sticker.jpg" alt="La Familia">
+</div>
+
+
+        <div id="formulario">
+            <h1>Calculadora de PT</h1>
+            <p>Materiais + divisão (30% / 70%)</p>
+
+            <!-- Quantidade -->
+            <div class="campo">
+                <span class="material-symbols-outlined">inventory_2</span>
+                <input type="number" id="qtd" placeholder="Quantidade de PT">
+            </div>
+
+            <!-- Select de valores -->
+            <div class="campo">
+                <span class="material-symbols-outlined">payments</span>
+                <select id="valorSelect">
+                    <option value="">Selecione o valor da PT</option>
+                    <option value="60000">60.000</option>
+                    <option value="65000">65.000</option>
+                    <option value="70000">70.000</option>
+                    <option value="75000">75.000</option>
+                </select>
+            </div>
+
+            <!-- Valor manual -->
+            <div class="campo">
+                <span class="material-symbols-outlined">edit</span>
+                <input type="number" id="valorManual" placeholder="Ou digite o valor manual">
+            </div>
+
+            <div class="enviar">
+                <input type="button" value="Calcular" onclick="calcular()">
+            </div>
+
+            <div class="resultado" id="resultado"></div>
+        </div>
+    </section>
+</main>
+
+<script>
+function calcular() {
+    let qtd = Number(document.getElementById("qtd").value);
+    let valorSelect = Number(document.getElementById("valorSelect").value);
+    let valorManual = Number(document.getElementById("valorManual").value);
+
+    // Prioridade: valor manual
+    let valorPT = valorManual > 0 ? valorManual : valorSelect;
+
+    if (!qtd || !valorPT) {
+        document.getElementById("resultado").innerHTML = "Preencha todos os campos.";
+        return;
+    }
+
+    let metal = 150 * qtd;
+    let cobre = 150 * qtd;
+    let vidro = 175 * qtd;
+    let plastico = 175 * qtd;
+    let borracha = 175 * qtd;
+
+    let totalMateriais = 825 * qtd;
+    let totalValor = valorPT * qtd;
+
+    let voce = totalValor * 0.30;
+    let fac = totalValor * 0.70;
+
+    document.getElementById("resultado").innerHTML = `
+        <strong>Materiais necessários</strong><br>
+        Metal: ${metal}<br>
+        Cobre: ${cobre}<br>
+        Vidro: ${vidro}<br>
+        Plástico: ${plastico}<br>
+        Borracha: ${borracha}<br>
+        <strong>Total:</strong> ${totalMateriais}<br><br>
+
+        <strong>Valor total:</strong> ${totalValor}<br>
+        Você (30%): ${voce}<br>
+        Facção (70%): ${fac}
+    `;
+}
+</script>
+
+</body>
+</html>

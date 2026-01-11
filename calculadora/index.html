@@ -82,7 +82,7 @@
         }
 
         .campo span {
-            color: #22c55e;
+            color: #1678d3;
             margin-right: 8px;
         }
 
@@ -103,14 +103,14 @@
             padding: 10px;
             border: none;
             border-radius: 8px;
-            background: #22c55e;
-            color: #020617;
+            background: #13145c;
+            color: #d2d4db;
             font-size: 16px;
             cursor: pointer;
         }
 
         .enviar input:hover {
-            background: #16a34a;
+            background: #1618a3;
         }
 
         .resultado {
@@ -144,13 +144,13 @@
 <main>
     <section id="login">
         <div id="imagem">
-    <img src="https://image.spreadshirtmedia.net/image-server/v1/products/T1459A839PA4459PT28X0Y30D191412447W10000H4016Cx000000/views/1,width=1200,height=630,appearanceId=839,backgroundColor=F2F2F2/la-familia-sticker.jpg" alt="La Familia">
+    <img src="../calculadora/foto/DISNATIA.png" alt="DINASTIA">
 </div>
 
 
         <div id="formulario">
             <h1>Calculadora de PT</h1>
-            <p>Materiais + divisão (30% / 70%)</p>
+            <p><strong>Materiais + divisão</strong></p>
 
             <!-- Quantidade -->
             <div class="campo">
@@ -227,15 +227,12 @@ function calcular() {
             Corpo de Pistola: ${corpoPistola}<br>
             Peça de Arma Leve: ${pecaArmaLeve}<br><br>
 
-            <strong>🔢 Total de Materiais:</strong> ${totalMateriais}<br><br>
+            <strong>🔢 Total de Materiais:</strong> ${totalMateriais}<br>
 
             <strong>💰 Valor Total</strong><br><br>
-            Valor Geral: R$ ${totalValor.toLocaleString("pt-BR")}<br><br>
+            Valor Geral: R$ ${totalValor.toLocaleString("pt-BR")}<br>
 
-            <strong>📊 Divisão do Valor</strong><br><br>
-            Você (30%): R$ ${parte30.toLocaleString("pt-BR")}<br>
-            Facção (70%): R$ ${parte70.toLocaleString("pt-BR")}
-        </div>
+            
     `;
 }
 </script>

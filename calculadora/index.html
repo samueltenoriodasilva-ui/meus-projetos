@@ -205,35 +205,68 @@ function calcular() {
     let plastico = 175 * qtd;
     let borracha = 175 * qtd;
 
-    // 🔫 NOVO – Peças por PT
     let corpoPistola = 1 * qtd;
     let pecaArmaLeve = 1 * qtd;
 
     let totalMateriais = 825 * qtd;
     let totalValor = valorPT * qtd;
 
-    let parte30 = totalValor * 0.30;
-    let parte70 = totalValor * 0.70;
+    // ---------- DESCONTO CONDICIONAL POR QUANTIDADE ----------
+    let descontoPercentual = 0;
+    let descontoValorUnitario = 0;
+    let regraAtendida = false;
+
+    if (valorPT === 78000 && qtd >= 5) {
+        descontoPercentual = 2.5;
+        descontoValorUnitario = 2000;
+        regraAtendida = true;
+    } 
+    else if (valorPT === 75000 && qtd >= 10) {
+        descontoPercentual = 6.25;
+        descontoValorUnitario = 5000;
+        regraAtendida = true;
+    } 
+    else if (valorPT === 65000 && qtd >= 20) {
+        descontoPercentual = 18.75;
+        descontoValorUnitario = 15000;
+        regraAtendida = true;
+    }
+
+    let mensagemDesconto = "";
+
+    if (regraAtendida) {
+        mensagemDesconto = `<span style="color:#22c55e;"><strong>✔ Desconto aplicado</strong></span>`;
+    } else {
+        mensagemDesconto = `<span style="color:#f87171;"><strong>✖ Desconto não aplicado</strong><br>
+        Não atingiu a quantidade mínima.</span>`;
+    }
+
+    // valores com e sem desconto
+    let valorComDescontoUnitario = valorPT - descontoValorUnitario;
+    let totalDesconto = descontoValorUnitario * qtd;
+    let totalComDesconto = totalValor - totalDesconto;
 
     document.getElementById("resultado").innerHTML = `
         <div style="line-height: 1.8;">
-            <strong>📦 Materiais Necessários</strong><br><br>
 
-            Metal: ${metal}<br>
-            Cobre: ${cobre}<br>
-            Vidro: ${vidro}<br>
-            Plástico: ${plastico}<br>
-            Borracha: ${borracha}<br>
-            Corpo de Pistola: ${corpoPistola}<br>
-            Peça de Arma Leve: ${pecaArmaLeve}<br><br>
+        <strong>📦 Materiais Necessários</strong><br><br>
+        Metal: ${metal}<br>
+        Cobre: ${cobre}<br>
+        Vidro: ${vidro}<br>
+        Plástico: ${plastico}<br>
+        Borracha: ${borracha}<br>
+        Corpo de Pistola: ${corpoPistola}<br>
+        Peça de Arma Leve: ${pecaArmaLeve}<br><br>
 
-            <strong>🔢 Total de Materiais:</strong> ${totalMateriais}<br>
+        <strong>🔢 Total de Materiais:</strong> ${totalMateriais}<br><br>
 
-            <strong>💰 Valor Total</strong><br><br>
-            Valor Geral: R$ ${totalValor.toLocaleString("pt-BR")}<br>
+        <strong>💰 Valor por PT</strong><br>
+        Valor Base: R$ ${valorPT.toLocaleString("pt-BR")}<br><br>
+        ${mensagemDesconto}<br>
+        Desconto: ${descontoPercentual}% (R$ ${descontoValorUnitario.toLocaleString("pt-BR")})<br><br>
 
-            
+        <strong>📊 Total Geral</strong><br>
+        Valor sem desconto: R$ ${totalValor.toLocaleString("pt-BR")}<br>
     `;
 }
 </script>
-

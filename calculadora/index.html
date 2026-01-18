@@ -163,10 +163,11 @@
                 <span class="material-symbols-outlined">payments</span>
                 <select id="valorSelect">
                     <option value="">Selecione o valor da PT</option>
+                    <option value="60000">60.000</option>
                     <option value="65000">65.000</option>
+                    <option value="70000">70.000</option>
+                    <option value="73000">73.000</option>
                     <option value="75000">75.000</option>
-                    <option value="78000">78.000</option>
-                    <option value="80000">80.000</option>
                 </select>
             </div>
 
@@ -216,17 +217,24 @@ function calcular() {
     let descontoValorUnitario = 0;
     let regraAtendida = false;
 
-    if (valorPT === 78000 && qtd >= 5) {
+    if (valorPT === 73000 && qtd >= 5) {
         descontoPercentual = 2.5;
         descontoValorUnitario = 2000;
         regraAtendida = true;
     } 
-    else if (valorPT === 75000 && qtd >= 10) {
+    else if (valorPT === 70000 && qtd >= 10) {
         descontoPercentual = 6.25;
         descontoValorUnitario = 5000;
         regraAtendida = true;
     } 
     else if (valorPT === 65000 && qtd >= 20) {
+        descontoPercentual = 18.75;
+        descontoValorUnitario = 15000;
+        regraAtendida = true;
+    }
+
+
+     else if (valorPT === 60000 && qtd >= 20) {
         descontoPercentual = 18.75;
         descontoValorUnitario = 15000;
         regraAtendida = true;

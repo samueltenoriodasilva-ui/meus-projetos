@@ -216,29 +216,63 @@ function calcular() {
     let descontoPercentual = 0;
     let descontoValorUnitario = 0;
     let regraAtendida = false;
+const PRECO_BASE = 75000;
+const PRECO_5_9 = 73000;
+const PRECO_10_19 = 70000;
+const PRECO_20 = 65000;
+const PRECO_PARCEIRA = 60000;
 
-    if (valorPT === 73000 && qtd >= 5) {
+regraAtendida = false;
+descontoPercentual = 0;
+descontoValorUnitario = 0;
+
+// PARCERIA — sempre válido
+if (valorPT === PRECO_PARCEIRA) {
+    descontoPercentual = 20;
+    descontoValorUnitario = 15000;
+    valorFinalUnitario = PRECO_PARCEIRA;
+    regraAtendida = true;
+}
+
+// SEM PARCERIA
+else {
+
+    // abaixo de 5 PT → sem desconto
+    if (qtd < 5 && valorPT === PRECO_BASE) {
+        valorFinalUnitario = PRECO_BASE;
+    }
+
+    // 5 a 9 PT → somente 73k
+    else if (qtd >= 5 && qtd < 10 && valorPT === PRECO_5_9) {
+        valorFinalUnitario = PRECO_5_9;
         descontoPercentual = 2.5;
-        descontoValorUnitario = 2000;
+        descontoValorUnitario = 1875;
         regraAtendida = true;
-    } 
-    else if (valorPT === 70000 && qtd >= 10) {
+    }
+
+    // 10 a 19 PT → somente 70k
+    else if (qtd >= 10 && qtd < 20 && valorPT === PRECO_10_19) {
+        valorFinalUnitario = PRECO_10_19;
         descontoPercentual = 6.25;
-        descontoValorUnitario = 5000;
-        regraAtendida = true;
-    } 
-    else if (valorPT === 65000 && qtd >= 20) {
-        descontoPercentual = 18.75;
-        descontoValorUnitario = 15000;
+        descontoValorUnitario = 4700;
         regraAtendida = true;
     }
 
-
-     else if (valorPT === 60000 && qtd >= 20) {
-        descontoPercentual = 18.75;
-        descontoValorUnitario = 15000;
+    // 20+ PT → somente 65k
+    else if (qtd >= 20 && valorPT === PRECO_20) {
+        valorFinalUnitario = PRECO_20;
+        descontoPercentual = 13.33;
+        descontoValorUnitario = 10000;
         regraAtendida = true;
     }
+
+    // qualquer tentativa fora da regra
+    else {
+        regraAtendida = false;
+        descontoPercentual = 0;
+        descontoValorUnitario = 0;
+    }
+}
 
     let mensagemDesconto = "";
 
@@ -274,7 +308,7 @@ function calcular() {
         Desconto: ${descontoPercentual}% (R$ ${descontoValorUnitario.toLocaleString("pt-BR")})<br><br>
 
         <strong>📊 Total Geral</strong><br>
-        Valor sem desconto: R$ ${totalValor.toLocaleString("pt-BR")}<br>
+        Valor com desconto: R$ ${totalValor.toLocaleString("pt-BR")}<br>
     `;
 }
 </script>

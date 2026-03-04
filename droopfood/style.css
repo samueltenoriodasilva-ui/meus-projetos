@@ -63,16 +63,3 @@
     color: beige;
     text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.479);
 }
-
-.drone p{
-    background-color: rgba(0, 0, 0, 0.308);
-    border-radius: 5px;
-
-    padding: 15px;
-    width: 400px;
-    margin: 70px;
-
-    color: rgb(0, 0, 0);
-    font-size: 1.3em;
-    text-shadow: 2px 1px 0px rgba(255, 255, 255, 0.37);
-}

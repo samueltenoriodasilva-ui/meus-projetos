@@ -1,23 +1,11 @@
-"use strict";
+function coletarDados(){
 
-const imagens = [
-    "foto/drone.png"
-];
+let nome = prompt("Digite seu nome:");
+let regiao = prompt("Digite sua região:");
 
-let index = 0;
+alert("Dados enviados!");
 
-function trocarImagens() {
-    index++;
+document.getElementById("resultado").innerHTML =
+"Nome: " + nome + "<br>Região: " + regiao;
 
-    if (index >= imagens.length) {
-        index = 0;
-    }
-
-    document.querySelector(".cabecario").style.backgroundImage =
-        `url(${imagens[index]})`;
 }
-
-document.querySelector(".cabecario").style.backgroundImage =
-    `url(${imagens[0]})`;
-
-setInterval(trocarImagens, 3000);

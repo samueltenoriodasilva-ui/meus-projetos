@@ -72,6 +72,60 @@ div.itens1{
     background-color: azure;
 }
 
+div.itens1:hover{
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.destaques > #foto1{
+    background-image: url(./fotos/foto-drone1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 250px;
+    height: 350px;
+}
+
+.destaques > #foto2{
+    background-image: url(./fotos/foto-drone2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 250px;
+    height: 350px;
+}
+
+.destaques > #foto3{
+    background-image: url(./fotos/foto-drone3.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 250px;
+    height: 350px;
+}
+
+.destaques .botao{
+    padding: 10px;
+    width: 100px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.botao:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+
+    color: azure;
+    background-color: black;
+
+    border: none;
+}
+
 .caixa{
     display: flex;
     justify-items: first baseline;
@@ -100,24 +154,7 @@ div.itens1{
 
 }
 
-.sobre > p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    
-    color:rgb(255, 255, 255);
-    background-color: lightsalmon;
-    
-    width: 600px ;
-    height:290px;
-
-    padding: 25px;
-    margin: left;
-    margin-left: 100px;
-
-
-}
-
-.contato h1{
+.contato > h1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3rem;
     
@@ -126,25 +163,39 @@ div.itens1{
     width: 140px;
     height: 56px;
 
-    margin: left;
+    margin: right;
     margin-left: 100px;
 
+}
+
+
+.sobre > p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: white;
+
+    background: linear-gradient(135deg, lightsalmon, orange);
+
+    width: 600px;
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-left: 100px;
 }
 
 .contato > p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
-    
-    color:rgb(255, 255, 255);
-    background-color: lightsalmon;
-    
-    width: 600px ;
-    height:290px;
+    color: white;
 
+    background: linear-gradient(135deg, lightsalmon, orange);
+
+    width: 600px;
     padding: 25px;
-    margin: right ;
+
+    border-radius: 15px;
+
     margin-right: 100px;
-
-
 }
 

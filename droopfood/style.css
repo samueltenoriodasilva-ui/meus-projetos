@@ -50,8 +50,40 @@ body{
     font-size: 1.5rem;
     font-weight: bold;
     text-shadow: 2px 1px 0px rgba(0, 0, 0, 0.377);
+}
 
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+nav > ul{
+    display: flex;
+    list-style: none;
+    gap: 20px 20px;
+    margin-bottom: 50px;
+}
+
+nav  a{
+    display: inline-block;
+
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 25px;
+
+    background-color: rgb(209, 122, 9);
+    padding: 10px;
+
+    border-radius: 2px;
+}
+
+nav a:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+
+    background-color: black;
+    color: beige;
 }
 
 main.corpo{

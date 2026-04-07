@@ -165,60 +165,6 @@ div.teste2{
     background-image: url(../fotos/ROUPA\ VERMELHA.webp);
 }
 
-/* html produtos*/
-#bodyprodutos{
-    padding: 0px;
-    margin: 0px;
-    background-color: rgb(0, 0, 0);
-    box-sizing: border-box;
-}
-
-.topo{
-    color: aliceblue;
-    font-size: 1.5em;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-    width: 170px;
-    padding: 1px;
-    margin: auto;
-    
-}
-
-.produtos > div.caixa{
-    
-    width: 90vw;
-    height: 90vh;
-    margin: auto;
-
-
-    
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: flex-start;
-    align-items:stretch ;
-    gap: 70px;
-}
-
-.produtos > div >#itens{
-    width: 216px;
-    height: 400px;
-    background-color:bisque;
-    
-    flex: 1 1 210px;
-
-    background-image: url(../fotos/camisa.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    
-    
-}
-
-
-
-
-
 /* html perfil*/
 
 body.perfil{
@@ -423,4 +369,73 @@ section#login{
 
 div.campo > input:focus-within{
     background-color: aliceblue;
+}
+
+
+/* html produtos*/
+#bodyprodutos{
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+
+.topo{
+    color: aliceblue;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    width: 170px;
+    padding: 1px;
+    margin: auto;
+    
+}
+
+.produtos > div.caixa{
+    
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+
+
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items:stretch ;
+    gap: 70px;
+}
+
+.produtos > div >#itens{
+    width: 216px;
+    height: 400px;
+    background-color:bisque;
+    
+    flex: 1 1 210px;
+
+    background-image: url(../fotos/camisa.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.produtos > .filtro{
+    background-color: #dddada;
+    width: 30%;
+    height: 100vh;
+}
+
+#femenino:hover{
+     
+}
+
+#mascolino:hover{
+    
+}
+
+.fesconder, .mesconder{
+    display: none;
 }

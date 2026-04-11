@@ -1,0 +1,45 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: row;
+
+    background-color: rgb(43, 48, 92);
+    width: 100vw;
+    height: 100vh;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5.3em;
+    color: rgb(235, 238, 240);
+
+    margin: auto;
+    text-align: center;
+
+}
+
+p{
+    color: aliceblue;
+    text-align: center;
+
+    font-size: 1.3em;
+}
+
+nav{
+    margin-top: 50px;
+}
+
+nav p{
+    background-color: aliceblue;
+
+    width: 150px;
+    margin: auto;
+
+    padding: 6px;
+}

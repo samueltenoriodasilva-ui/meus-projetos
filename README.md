@@ -19,18 +19,17 @@ Aqui estão alguns dos meus sites e testes hospedados gratuitamente no **GitHub 
 
 - [**prato-tipico**](https://samueltenoriodasilva-ui.github.io/meus-projetos/prato-tipico/)
 
-
  - [**politica**](https://samueltenoriodasilva-ui.github.io/meus-projetos/politica/)
-
 
 - [**esporte-musica**](https://samueltenoriodasilva-ui.github.io/meus-projetos/esporte-musica/)
  
-
 - [**calculadora**](https://samueltenoriodasilva-ui.github.io/meus-projetos/calculadora/)
 
 - [**droop food**](https://samueltenoriodasilva-ui.github.io/meus-projetos/droopfood/)
 
 - [**Alura-02**](https://samueltenoriodasilva-ui.github.io/meus-projetos/alura-02/)
+
+- [**Maratona 3**](https://samueltenoriodasilva-ui.github.io/meus-projetos/maratuona-tec-2026/)
  ---
 ## 📌 Sobre o Repositório
 Este repositório serve como um **portfólio de sites** criados com **HTML, CSS e JavaScript**, publicados através do **GitHub Pages**.

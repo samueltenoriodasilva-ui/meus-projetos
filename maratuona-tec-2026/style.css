@@ -1,28 +1,215 @@
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-section.areap{
-    width: 100vw;
-    height: 15vh;
-
-    background-color: bisque;
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f7f2;
+    color: #333;
+    line-height: 1.6;
 }
 
-div.titulop{
-    background-color: blue;
+/* MENU */
 
-    width: 100vw;
-    height: 15vh;
-
-    font-size: 1.8em;
-    font-family: ;
+header{
+    background: #2e7d32;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
-nav.navecacaop{
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+nav h1{
+    color: white;
+    font-size: 28px;
+}
+
+nav ul{
+    list-style: none;
+
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;  
-    direction: row;
+    gap: 20px;
 }
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover{
+    color: #c8e6c9;
+}
+
+/* HERO */
+
+.hero{
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(46,125,50,0.85),
+            rgba(46,125,50,0.85)
+        );
+
+    color: white;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.hero h2{
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+.hero p{
+    max-width: 850px;
+    margin: 0 auto 20px;
+    font-size: 20px;
+}
+
+/* BOTÃO */
+
+.btn{
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 15px 35px;
+
+    background: white;
+    color: #2e7d32;
+
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: #c8e6c9;
+    transform: translateY(-3px);
+}
+
+/* BIBLIOTECA */
+
+.biblioteca-home{
+    padding: 80px 0;
+}
+
+.biblioteca-home h2{
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card{
+    background: white;
+
+    padding: 35px 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.card h3{
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.card p{
+    color: #555;
+    font-size: 16px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px){
+
+    nav{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul{
+        justify-content: center;
+    }
+
+    .hero h2{
+        font-size: 36px;
+    }
+
+    .hero p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px){
+
+    nav h1{
+        font-size: 24px;
+    }
+
+    nav ul{
+        gap: 12px;
+    }
+
+    nav a{
+        font-size: 14px;
+    }
+
+    .hero h2{
+        font-size: 30px;
+    }
+
+    .biblioteca-home h2{
+        font-size: 30px;
+    }
+
+    .card{
+        padding: 25px;
+    }
+}
+

@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section.areap{
+    width: 100vw;
+    height: 15vh;
+
+    background-color: bisque;
+}
+
+div.titulop{
+    background-color: blue;
+
+    width: 100vw;
+    height: 15vh;
+
+    font-size: 1.8em;
+    font-family: ;
+}
+
+nav.navecacaop{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    direction: row;
+}

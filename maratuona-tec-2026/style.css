@@ -214,189 +214,189 @@ nav a:hover{
 }
 
 
-/* ==========================
-   PÁGINA AUTOMAÇÃO V2
-========================== */
+    /* ==========================
+    PÁGINA AUTOMAÇÃO V2
+    ========================== */
 
-html{
-    scroll-behavior: smooth;
-}
+    html{
+        scroll-behavior: smooth;
+    }
 
-.automacao-page{
-    background: #eef5ee;
-}
-
-.automacao-page .container{
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 60px;
-    background: #fff;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.08);
-}
-
-/* MENU */
-
-.automacao-page nav ul li{
-    transition: .3s;
-}
-
-.automacao-page nav ul li:hover{
-    transform: scale(1.05);
-}
-
-.automacao-page nav ul li a{
-    color: #fff;
-}
-
-/* TÍTULO PRINCIPAL */
-
-.automacao-page h2{
-    text-align: center;
-    color: #2e7d32;
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
-.automacao-page h2::after{
-    content: "";
-    display: block;
-    width: 120px;
-    height: 4px;
-    background: #4caf50;
-    margin: 15px auto 0;
-    border-radius: 50px;
-}
-
-/* TÍTULOS DAS SEÇÕES */
-
-.automacao-page h3{
-    text-align: center;
-    color: #1b5e20;
-    font-size: 30px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-}
-
-/* SUBTÍTULOS */
-
-.automacao-page h4{
-    color: #388e3c;
-    font-size: 22px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-/* PARÁGRAFOS */
-
-.automacao-page p{
-    font-size: 18px;
-    color: #555;
-    line-height: 1.9;
-    text-align: justify;
-    margin-bottom: 20px;
-}
-
-/* ÍNDICE DE CONTEÚDOS */
-
-.automacao-page .indice{
-    list-style: none;
-    padding: 0;
-    margin: 25px 0;
-}
-
-.automacao-page .indice li{
-    background: #f5faf5;
-    border: 1px solid #dcedc8;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    transition: .3s;
-}
-
-.automacao-page .indice li:hover{
-    transform: translateX(8px);
-    box-shadow: 0 5px 15px rgba(0,0,0,.08);
-}
-
-.automacao-page .indice a{
-    display: block;
-    padding: 15px 20px;
-    color: #1b5e20;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* LISTAS DO CONTEÚDO */
-
-.automacao-page section ul{
-    margin: 20px 0;
-    padding-left: 25px;
-}
-
-.automacao-page section li{
-    margin-bottom: 10px;
-    color: #444;
-}
-
-/* EXEMPLOS */
-
-.automacao-page .exemplo{
-    background: linear-gradient(
-        135deg,
-        #e8f5e9,
-        #f1f8e9
-    );
-    padding: 25px;
-    border-radius: 15px;
-    margin-top: 20px;
-}
-
-.automacao-page .exemplo p{
-    margin: 0;
-}
-
-/* SEPARADOR */
-
-.automacao-page hr{
-    border: none;
-    height: 1px;
-    background: #ddd;
-    margin: 50px 0;
-}
-
-/* IMAGENS */
-
-.automacao-page img{
-    width: 100%;
-    border-radius: 15px;
-    margin: 25px 0;
-}
-
-/* POSIÇÃO DAS ÂNCORAS */
-
-.automacao-page section{
-    scroll-margin-top: 120px;
-}
-
-/* RESPONSIVO */
-
-@media(max-width:768px){
+    .automacao-page{
+        background: #eef5ee;
+    }
 
     .automacao-page .container{
-        padding: 30px;
-        margin: 20px;
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 60px;
+        background: #fff;
+        border-radius: 25px;
+        box-shadow: 0 10px 30px rgba(0,0,0,.08);
     }
+
+    /* MENU */
+
+    .automacao-page nav ul li{
+        transition: .3s;
+    }
+
+    .automacao-page nav ul li:hover{
+        transform: scale(1.05);
+    }
+
+    .automacao-page nav ul li a{
+        color: #fff;
+    }
+
+    /* TÍTULO PRINCIPAL */
 
     .automacao-page h2{
-        font-size: 36px;
+        text-align: center;
+        color: #2e7d32;
+        font-size: 48px;
+        margin-bottom: 15px;
     }
+
+    .automacao-page h2::after{
+        content: "";
+        display: block;
+        width: 120px;
+        height: 4px;
+        background: #4caf50;
+        margin: 15px auto 0;
+        border-radius: 50px;
+    }
+
+    /* TÍTULOS DAS SEÇÕES */
 
     .automacao-page h3{
-        font-size: 24px;
+        text-align: center;
+        color: #1b5e20;
+        font-size: 30px;
+        margin-top: 50px;
+        margin-bottom: 20px;
     }
 
-    .automacao-page p,
-    .automacao-page li{
-        font-size: 16px;
+    /* SUBTÍTULOS */
+
+    .automacao-page h4{
+        color: #388e3c;
+        font-size: 22px;
+        margin-top: 30px;
+        margin-bottom: 10px;
     }
-}
+
+    /* PARÁGRAFOS */
+
+    .automacao-page p{
+        font-size: 18px;
+        color: #555;
+        line-height: 1.9;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    /* ÍNDICE DE CONTEÚDOS */
+
+    .automacao-page .indice{
+        list-style: none;
+        padding: 0;
+        margin: 25px 0;
+    }
+
+    .automacao-page .indice li{
+        background: #f5faf5;
+        border: 1px solid #dcedc8;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        transition: .3s;
+    }
+
+    .automacao-page .indice li:hover{
+        transform: translateX(8px);
+        box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    }
+
+    .automacao-page .indice a{
+        display: block;
+        padding: 15px 20px;
+        color: #1b5e20;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    /* LISTAS DO CONTEÚDO */
+
+    .automacao-page section ul{
+        margin: 20px 0;
+        padding-left: 25px;
+    }
+
+    .automacao-page section li{
+        margin-bottom: 10px;
+        color: #444;
+    }
+
+    /* EXEMPLOS */
+
+    .automacao-page .exemplo{
+        background: linear-gradient(
+            135deg,
+            #e8f5e9,
+            #f1f8e9
+        );
+        padding: 25px;
+        border-radius: 15px;
+        margin-top: 20px;
+    }
+
+    .automacao-page .exemplo p{
+        margin: 0;
+    }
+
+    /* SEPARADOR */
+
+    .automacao-page hr{
+        border: none;
+        height: 1px;
+        background: #ddd;
+        margin: 50px 0;
+    }
+
+    /* IMAGENS */
+
+    .automacao-page img{
+        width: 100%;
+        border-radius: 15px;
+        margin: 25px 0;
+    }
+
+    /* POSIÇÃO DAS ÂNCORAS */
+
+    .automacao-page section{
+        scroll-margin-top: 120px;
+    }
+
+    /* RESPONSIVO */
+
+    @media(max-width:768px){
+
+        .automacao-page .container{
+            padding: 30px;
+            margin: 20px;
+        }
+
+        .automacao-page h2{
+            font-size: 36px;
+        }
+
+        .automacao-page h3{
+            font-size: 24px;
+        }
+
+        .automacao-page p,
+        .automacao-page li{
+            font-size: 16px;
+        }
+    }

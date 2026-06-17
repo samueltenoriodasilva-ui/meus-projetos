@@ -218,6 +218,10 @@ nav a:hover{
    PÁGINA AUTOMAÇÃO V2
 ========================== */
 
+html{
+    scroll-behavior: smooth;
+}
+
 .automacao-page{
     background: #eef5ee;
 }
@@ -229,15 +233,20 @@ nav a:hover{
     background: #fff;
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    transition: 0.3s;
 }
 
-.automacao-page nav> ul> li:hover{
+/* MENU */
+
+.automacao-page nav ul li{
+    transition: .3s;
+}
+
+.automacao-page nav ul li:hover{
     transform: scale(1.05);
 }
 
- .automacao-page nav> ul> li> a{
-    color: #2e7d32;
+.automacao-page nav ul li a{
+    color: #fff;
 }
 
 /* TÍTULO PRINCIPAL */
@@ -288,21 +297,45 @@ nav a:hover{
     margin-bottom: 20px;
 }
 
-/* LISTAS */
+/* ÍNDICE DE CONTEÚDOS */
 
-.automacao-page ul{
+.automacao-page .indice{
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 25px 0;
 }
 
-.automacao-page li{
+.automacao-page .indice li{
     background: #f5faf5;
-    margin-bottom: 12px;
-    padding: 15px 20px;
-    border-radius: 12px;
     border: 1px solid #dcedc8;
-    font-size: 17px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: .3s;
+}
+
+.automacao-page .indice li:hover{
+    transform: translateX(8px);
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+.automacao-page .indice a{
+    display: block;
+    padding: 15px 20px;
+    color: #1b5e20;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* LISTAS DO CONTEÚDO */
+
+.automacao-page section ul{
+    margin: 20px 0;
+    padding-left: 25px;
+}
+
+.automacao-page section li{
+    margin-bottom: 10px;
+    color: #444;
 }
 
 /* EXEMPLOS */
@@ -313,7 +346,6 @@ nav a:hover{
         #e8f5e9,
         #f1f8e9
     );
-
     padding: 25px;
     border-radius: 15px;
     margin-top: 20px;
@@ -338,6 +370,12 @@ nav a:hover{
     width: 100%;
     border-radius: 15px;
     margin: 25px 0;
+}
+
+/* POSIÇÃO DAS ÂNCORAS */
+
+.automacao-page section{
+    scroll-margin-top: 120px;
 }
 
 /* RESPONSIVO */

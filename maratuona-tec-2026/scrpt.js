@@ -15,3 +15,9 @@ setInterval(() => {
     hero.style.backgroundImage =
         `linear-gradient(rgba(0, 0, 0, 0.46), rgba(1, 2, 1, 0.57)), url('${imagens[atual]}')`;
 }, 5000);
+
+function toggleMenu() {
+    document
+        .getElementById("menu")
+        .classList.toggle("ativo");
+}

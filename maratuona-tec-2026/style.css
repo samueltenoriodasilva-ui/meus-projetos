@@ -454,3 +454,25 @@ nav a:hover{
         }
     }
 
+/* ==========================
+   RODAPÉ
+========================== */
+
+footer{
+    background: #657a5f;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 50px;
+}
+
+footer p{
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+.containerf{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 20px;
+}

@@ -117,6 +117,10 @@
     .menu-indice{
         width: 220px;
     }
+    .menu-indice.ativo{
+        margin-top: 80px;
+    }
+    
 }
 
 /* ==========================

@@ -172,56 +172,6 @@ nav a:hover{
     font-size: 16px;
 }
 
-/* RESPONSIVO */
-
-@media (max-width: 900px){
-
-    nav{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul{
-        justify-content: center;
-    }
-
-    .hero h2{
-        font-size: 36px;
-    }
-
-    .hero p{
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 600px){
-
-    nav h1{
-        font-size: 24px;
-    }
-
-    nav ul{
-        gap: 12px;
-    }
-
-    nav a{
-        font-size: 14px;
-    }
-
-    .hero h2{
-        font-size: 30px;
-    }
-
-    .biblioteca-home h2{
-        font-size: 30px;
-    }
-
-    .card{
-        padding: 25px;
-    }
-}
-
-
     /* ==========================
     PÁGINA AUTOMAÇÃO V2
     ========================== */
@@ -438,29 +388,6 @@ nav a:hover{
 .menu-indice a:hover{
     background: #e8f5e9;
 }
-
-    /* RESPONSIVO */
-
-    @media(max-width:768px){
-
-        .automacao-page .container{
-            padding: 30px;
-            margin: 20px;
-        }
-
-        .automacao-page h2{
-            font-size: 36px;
-        }
-
-        .automacao-page h3{
-            font-size: 24px;
-        }
-
-        .automacao-page p,
-        .automacao-page li{
-            font-size: 16px;
-        }
-    }
 
 /* ==========================
    RODAPÉ

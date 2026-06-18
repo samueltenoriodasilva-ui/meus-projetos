@@ -1,0 +1,170 @@
+/* ==========================
+   TABLETS
+========================== */
+
+@media (max-width: 992px){
+
+    nav{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul{
+        justify-content: center;
+    }
+
+    .hero h2{
+        font-size: 40px;
+    }
+
+    .hero p{
+        font-size: 18px;
+    }
+}
+
+/* ==========================
+   CELULARES
+========================== */
+
+@media (max-width: 768px){
+
+    .container{
+        padding: 60px 20px;
+    }
+
+    nav{
+        padding: 15px;
+        gap: 15px;
+    }
+
+    nav h1{
+        font-size: 24px;
+    }
+
+    nav ul{
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a{
+        font-size: 14px;
+    }
+
+    .hero{
+        min-height: 70vh;
+    }
+
+    .hero h2{
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    .hero p{
+        font-size: 17px;
+        max-width: 100%;
+    }
+
+    .btn{
+        padding: 12px 28px;
+    }
+
+    .biblioteca-home{
+        padding: 60px 0;
+    }
+
+    .biblioteca-home h2{
+        font-size: 30px;
+    }
+
+    .cards{
+        gap: 20px;
+    }
+
+    .card{
+        padding: 25px;
+    }
+
+    /* Automação */
+
+    .automacao-page .container{
+        margin: 20px;
+        padding: 30px;
+    }
+
+    .automacao-page h2{
+        font-size: 36px;
+    }
+
+    .automacao-page h3{
+        font-size: 24px;
+    }
+
+    .automacao-page h4{
+        font-size: 20px;
+    }
+
+    .automacao-page p,
+    .automacao-page li{
+        font-size: 16px;
+    }
+
+    .btn-indice{
+        right: 15px;
+        left: auto;
+        top: 90px;
+    }
+
+    .menu-indice{
+        width: 220px;
+    }
+}
+
+/* ==========================
+   CELULARES PEQUENOS
+========================== */
+
+@media (max-width: 480px){
+
+    nav h1{
+        font-size: 20px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero h2{
+        font-size: 26px;
+    }
+
+    .hero p{
+        font-size: 15px;
+    }
+
+    .btn{
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .biblioteca-home h2{
+        font-size: 26px;
+    }
+
+    .card h3{
+        font-size: 20px;
+    }
+
+    .automacao-page .container{
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .automacao-page h2{
+        font-size: 30px;
+    }
+
+    .automacao-page h3{
+        font-size: 22px;
+    }
+}

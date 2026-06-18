@@ -378,6 +378,59 @@ nav a:hover{
         scroll-margin-top: 120px;
     }
 
+    /* ==========================
+   ÍNDICE LATERAL RETRÁTIL
+========================== */
+
+.btn-indice{
+    position: fixed;
+    top: 100px;
+    left: 93%;
+    z-index: 1000;
+    padding: 12px 18px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menu-indice{
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 250px;
+    height: 100%;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.menu-indice.ativo{
+    left: 0;
+    margin-top: 40px;
+}
+
+.menu-indice h3{
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+.menu-indice a{
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.menu-indice a:hover{
+    background: #e8f5e9;
+}
+
     /* RESPONSIVO */
 
     @media(max-width:768px){
@@ -400,3 +453,4 @@ nav a:hover{
             font-size: 16px;
         }
     }
+

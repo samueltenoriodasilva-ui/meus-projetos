@@ -219,3 +219,30 @@
         text-align: center;
     }
 }
+
+/* ==========================
+   ÍNDICE RESPONSIVO
+========================== */
+
+/* Desktop */
+@media (min-width: 901px){
+    .menu-indice{
+        left: 0;
+        margin-top: 40px;
+    }
+
+    .btn-indice{
+        display: none;
+    }
+}
+
+/* Mobile e Tablet */
+@media (max-width: 900px){
+    .menu-indice{
+        display: none;
+    }
+
+    .btn-indice{
+        display: none;
+    }
+}

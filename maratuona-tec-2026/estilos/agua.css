@@ -1,0 +1,232 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f7f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==========================
+   NAV / HEADER
+========================== */
+
+header{
+    background: #6993a0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,.45);
+}
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+nav h1{
+    color: white;
+    font-size: 28px;
+}
+
+nav ul{
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    margin-top: 50px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+nav a:hover{
+    color: #c8e6c9;
+}
+
+/* BOTÃO MOBILE */
+
+.menu-toggle{
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+body.agua-page nav ul.ativo{
+    display: flex;
+    background: #367a9e;
+}
+
+/* efeito quando abre */
+body.agua-page nav ul.ativo{
+    box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.agua-page .container{
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 60px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ==========================
+   PÁGINA ÁGUA
+========================== */
+
+.agua-page{
+    background: #eef5ee;
+}
+
+.agua-page #agua h2{
+    text-align: center;
+    color: #0288d1;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.agua-page #agua h3{
+    text-align: center;
+    color: #0277bd;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.agua-page #agua p{
+    font-size: 18px;
+    color: #555;
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.agua-page #agua ul{
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.agua-page #agua li{
+    margin-bottom: 12px;
+    color: #444;
+    font-size: 17px;
+}
+
+/* BENEFÍCIOS */
+
+.agua-page #agua ul:first-of-type{
+    background: linear-gradient(
+        135deg,
+        #e1f5fe,
+        #f1f8ff
+    );
+
+    padding: 25px 35px;
+    border-radius: 15px;
+}
+
+/* RECURSOS */
+
+.agua-page #agua ul:last-of-type{
+    background: #f7fbfd;
+    padding: 25px 35px;
+    border-radius: 15px;
+}
+
+.agua-page #agua li:hover{
+    transform: translateX(5px);
+    transition: .3s;
+}
+
+/* ==========================
+   ÍNDICE LATERAL
+========================== */
+
+.btn-indice{
+    position: fixed;
+    top: 100px;
+    left: 93%;
+    z-index: 1000;
+
+    padding: 12px 18px;
+    background: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menu-indice{
+    position: fixed;
+    top: 0;
+    left: -280px;
+
+    width: 250px;
+    height: 100%;
+
+    background: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,.2);
+
+    padding: 20px;
+    transition: .3s;
+}
+
+.menu-indice.ativo{
+    left: 0;
+}
+
+.menu-indice a{
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* ==========================
+   HR / IMG
+========================== */
+
+.agua-page hr{
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 50px 0;
+}
+
+.agua-page img{
+    width: 100%;
+    border-radius: 15px;
+    margin: 25px 0;
+}
+

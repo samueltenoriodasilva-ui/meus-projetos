@@ -8,7 +8,6 @@ Aqui estão alguns dos meus sites e testes hospedados gratuitamente no **GitHub 
 ## 🔗 Acesse os Sites
 
 - 🏢 [**Empressa**](https://samueltenoriodasilva-ui.github.io/meus-projetos/empressa/)
-- 🎮 [**Kaka**](https://samueltenoriodasilva-ui.github.io/meus-projetos/kaka/)
 - ⚡ [**Prompt**](https://samueltenoriodasilva-ui.github.io/meus-projetos/prompt/)
 - 🏷️ [**TAGS**](https://samueltenoriodasilva-ui.github.io/meus-projetos/TAGS/)
 - 📂 [**Projetos**](https://samueltenoriodasilva-ui.github.io/meus-projetos/projetos/)

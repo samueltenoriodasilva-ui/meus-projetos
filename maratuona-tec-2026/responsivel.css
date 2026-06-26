@@ -281,3 +281,22 @@
         border-radius: 15px;
     }
 }
+
+@media (max-width: 768px){
+
+    .video{
+        padding: 50px 15px;
+    }
+
+    .video-box{
+        padding: 25px;
+    }
+
+    .video-box h2{
+        font-size: 1.6rem;
+    }
+
+    .video-box p{
+        font-size: 1rem;
+    }
+}

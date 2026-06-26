@@ -26,8 +26,6 @@ Aqui estão alguns dos meus sites e testes hospedados gratuitamente no **GitHub 
 
 - [**droop food**](https://samueltenoriodasilva-ui.github.io/meus-projetos/droopfood/)
 
-- [**Alura-02**](https://samueltenoriodasilva-ui.github.io/meus-projetos/alura-02/)
-
 - [**Maratona 3**](https://samueltenoriodasilva-ui.github.io/meus-projetos/maratuona-tec-2026/)
  ---
 ## 📌 Sobre o Repositório

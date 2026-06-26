@@ -12,10 +12,14 @@ html{
     scroll-behavior: smooth;
 }
 
+/* ==========================
+   BASE
+========================== */
+
 body{
     font-family: Arial, sans-serif;
-    background: #f4f7f2;
-    color: #333;
+    background: #f5f7f5;
+    color: #1f1f1f;
     line-height: 1.6;
 }
 
@@ -24,11 +28,11 @@ body{
 ========================== */
 
 header{
-    background: #527954;
+    background: #1b5e20;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.452);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
 }
 
 .menu-toggle{
@@ -39,7 +43,7 @@ header{
     font-size: 30px;
     cursor: pointer;
 }
-    
+
 nav{
     max-width: 1200px;
     margin: auto;
@@ -75,7 +79,7 @@ nav a{
 }
 
 nav a:hover{
-    color: #c8e6c9;
+    color: #a5d6a7;
 }
 
 /* ==========================
@@ -94,7 +98,6 @@ nav a:hover{
 
 .hero{
     min-height: 80vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,18 +105,16 @@ nav a:hover{
 
     background:
         linear-gradient(
-            rgba(0, 0, 0, 0.384),
-            rgba(0, 0, 0, 0.445)
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
         ),
         url(./fotos/lanoratoriaoagro.jpg);
 
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    background-image: rgba(0, 0, 0, 0.425);
 
     color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.452);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .hero h2{
@@ -133,22 +134,22 @@ nav a:hover{
 
 .btn{
     display: inline-block;
-
     margin-top: 20px;
     padding: 15px 35px;
 
-    background: white;
-    color: #2e7d32;
+    background: #2e7d32;
+    color: white;
 
     text-decoration: none;
     font-weight: bold;
-    border-radius: 10px;
+    border-radius: 12px;
 
     transition: 0.3s;
+    box-shadow: 0 6px 15px rgba(46, 125, 50, 0.25);
 }
 
 .btn:hover{
-    background: #c8e6c9;
+    background: #1b5e20;
     transform: translateY(-3px);
 }
 
@@ -162,7 +163,7 @@ nav a:hover{
 
 .biblioteca-home h2{
     text-align: center;
-    color: #2e7d32;
+    color: #1b5e20;
     margin-bottom: 50px;
     font-size: 36px;
 }
@@ -174,17 +175,20 @@ nav a:hover{
 }
 
 .card{
-    background: white;
+    background: #ffffff;
     padding: 35px 30px;
-    border-radius: 15px;
+    border-radius: 16px;
 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     transition: 0.3s;
+
+    border: 1px solid #e8f5e9;
 }
 
 .card:hover{
     transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+    border-color: #a5d6a7;
 }
 
 .card h3{
@@ -203,10 +207,10 @@ nav a:hover{
 ========================== */
 
 footer{
-    background: #657a5f;
+    background: #1b5e20;
     color: white;
     text-align: center;
-    padding: 10px 10px;
+    padding: 20px 10px;
     margin-top: 50px;
 }
 

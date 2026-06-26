@@ -24,7 +24,7 @@ body{
 ========================== */
 
 header{
-    background: #2e7d32;
+    background: #5e3386;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -83,7 +83,7 @@ nav a:hover{
 
 body.dados-page nav ul.ativo{
     display: flex;
-    background: #1b5e20;
+    background: #5e3386;
     box-shadow: 0 6px 20px rgba(0,0,0,.25);
 }
 
@@ -110,14 +110,14 @@ body.dados-page nav ul.ativo{
 
 .dados-page #dados h2{
     text-align: center;
-    color: #2e7d32;
+    color: #5e3386;
     font-size: 46px;
     margin-bottom: 20px;
 }
 
 .dados-page #dados h3{
     text-align: center;
-    color: #388e3c;
+    color: #5e3386;
     font-size: 30px;
     margin-top: 50px;
     margin-bottom: 20px;
@@ -153,7 +153,7 @@ body.dados-page nav ul.ativo{
 
 .dados-page #dados li:hover{
     transform: translateX(6px);
-    color: #2e7d32;
+    color: #5e3386;
 }
 
 /* ==========================
@@ -169,7 +169,7 @@ body.dados-page nav ul.ativo{
 
     padding: 30px 35px;
     border-radius: 15px;
-    border-left: 6px solid #4caf50;
+    border-left: 6px solid #5e3386;
 }
 
 /* ==========================
@@ -180,7 +180,7 @@ body.dados-page nav ul.ativo{
     background: #f7fbf7;
     padding: 30px 35px;
     border-radius: 15px;
-    border-left: 6px solid #81c784;
+    border-left: 6px solid #5e3386;
 }
 
 /* ==========================
@@ -252,7 +252,7 @@ body.dados-page nav ul.ativo{
 }
 
 ::-webkit-scrollbar-thumb{
-    background: #4caf50;
+    background: #5e3386;
     border-radius: 20px;
 }
 

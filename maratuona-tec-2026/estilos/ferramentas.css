@@ -23,8 +23,8 @@ body{
    NAV / HEADER
 ========================== */
 
-header{
-    background: #1f3b4d; /* azul escuro tecnológico */
+#header{
+    background: #0c293b; /* azul escuro tecnológico */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -100,7 +100,7 @@ nav a:hover{
 
 .ferramentas-page h2{
     text-align: center;
-    color: #14532d; /* verde escuro agro */
+    color: #1f3b4d; /* verde escuro agro */
     font-size: 44px;
     margin-bottom: 20px;
 }
@@ -154,7 +154,7 @@ nav a:hover{
 
 .menu-indice h3{
     text-align: center;
-    color: #14532d;
+    color: #1f3b4d;
     margin-bottom: 15px;
 }
 

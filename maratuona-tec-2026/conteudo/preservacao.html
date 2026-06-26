@@ -1,43 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../responsivel.css">
-    <title>Preservação</title>
+    <link rel="stylesheet" href="../estilos/preservacao.css">
+
+    <title>Preservação Ambiental</title>
 </head>
-<body>
-   <!-- PRESERVAÇÃO -->
-    <section id="preservacao">
-        <div class="container">
-            <h2>🌱 Preservação Ambiental</h2>
 
-            <h3>O que é?</h3>
+<body class="preservacao-page">
 
-            <p>
-                Preservar os recursos naturais garante a sustentabilidade
-                da produção agrícola para as próximas gerações.
-            </p>
+<!-- HEADER / NAV -->
+<header>
+    <nav>
+        <h1>AgroTech Sustentável</h1>
 
-            <h3>Conteúdo</h3>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </button>
 
-            <ul>
-                <li>Proteção dos rios e nascentes.</li>
-                <li>Conservação do solo.</li>
-                <li>Desmatamento e suas consequências.</li>
-                <li>Poluição ambiental.</li>
-                <li>Práticas sustentáveis.</li>
-            </ul>
+        <ul id="menu">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../conteudo/automacao.html">Próxima página</a></li>
+        </ul>
+    </nav>
+</header>
 
-            <h3>Recursos</h3>
+<section id="preservacao">
 
-            <ul>
-                <li>Guias educativos.</li>
-                <li>Vídeos explicativos.</li>
-                <li>Materiais de aprofundamento.</li>
-            </ul>
+    <div class="container">
+
+        <!-- ÍNDICE LATERAL -->
+        <div id="menuIndice" class="menu-indice">
+
+            <h3>🌱 Conteúdos</h3>
+
+            <a href="#o-que-e">O que é</a>
+            <a href="#importancia">Importância</a>
+            <a href="#rios">Proteção dos rios</a>
+            <a href="#solo">Conservação do solo</a>
+            <a href="#biodiversidade">Biodiversidade</a>
+            <a href="#desmatamento">Desmatamento</a>
+            <a href="#poluicao">Poluição ambiental</a>
+            <a href="#clima">Mudanças climáticas</a>
+            <a href="#praticas">Práticas sustentáveis</a>
+            <a href="#agroecologia">Agroecologia</a>
+            <a href="#beneficios">Benefícios</a>
+
         </div>
-    </section>
+
+        <h2>🌱 Preservação Ambiental</h2>
+
+        <h3 id="o-que-e">O que é?</h3>
+        <p>
+            A preservação ambiental consiste no conjunto de ações voltadas para a proteção dos recursos naturais,
+            garantindo que eles sejam utilizados de forma responsável sem comprometer sua existência no futuro.
+        </p>
+
+        <h3 id="importancia">🌍 Importância da preservação</h3>
+        <p>
+            Preservar o meio ambiente é essencial para manter o equilíbrio dos ecossistemas, garantir a produção de alimentos,
+            proteger a saúde humana e assegurar recursos naturais como água, solo fértil e biodiversidade.
+        </p>
+
+        <h3 id="rios">💧 Proteção dos rios e nascentes</h3>
+        <p>
+            Rios e nascentes são fontes fundamentais de água para consumo humano e agricultura.
+            A preservação das matas ciliares evita erosão, assoreamento e contaminação da água,
+            mantendo o equilíbrio dos ecossistemas aquáticos.
+        </p>
+
+        <h3 id="solo">🌱 Conservação do solo</h3>
+        <p>
+            O solo é a base da produção agrícola. Técnicas como rotação de culturas, plantio direto,
+            adubação orgânica e cobertura vegetal ajudam a evitar erosão, perda de nutrientes e degradação.
+        </p>
+
+        <h3 id="biodiversidade">🦋 Biodiversidade</h3>
+        <p>
+            A biodiversidade representa a variedade de seres vivos em um ecossistema.
+            Ela é essencial para o equilíbrio natural, controle de pragas e manutenção da cadeia alimentar.
+            Sua preservação evita colapsos ambientais e garante estabilidade agrícola.
+        </p>
+
+        <h3 id="desmatamento">🌳 Desmatamento e suas consequências</h3>
+        <p>
+            O desmatamento causa perda de habitats naturais, aumento do efeito estufa,
+            redução da chuva em determinadas regiões e empobrecimento do solo.
+            Além disso, afeta diretamente a fauna e a flora locais.
+        </p>
+
+        <h3 id="poluicao">🏭 Poluição ambiental</h3>
+        <p>
+            A poluição do ar, da água e do solo é causada principalmente por atividades industriais,
+            descarte incorreto de resíduos e uso excessivo de agrotóxicos.
+            Isso compromete a saúde humana e a qualidade dos alimentos produzidos.
+        </p>
+
+        <h3 id="clima">🌡️ Mudanças climáticas</h3>
+        <p>
+            As mudanças climáticas são resultado do aumento dos gases de efeito estufa.
+            Elas provocam secas, enchentes, alterações no ciclo das chuvas e impacto direto na agricultura,
+            reduzindo a produtividade e aumentando riscos ambientais.
+        </p>
+
+        <h3 id="praticas">♻️ Práticas sustentáveis</h3>
+        <p>
+            O uso consciente dos recursos naturais inclui reciclagem, redução do desperdício de água,
+            energia renovável, manejo adequado do solo e redução do uso de produtos químicos.
+        </p>
+
+        <h3 id="agroecologia">🌾 Agroecologia</h3>
+        <p>
+            A agroecologia é um modelo de produção agrícola sustentável que integra conhecimento científico e tradicional,
+            promovendo equilíbrio entre produção de alimentos e preservação ambiental,
+            sem uso excessivo de agrotóxicos.
+        </p>
+
+        <hr>
+
+        <h3 id="beneficios">🌍 Benefícios da preservação</h3>
+        <ul>
+            <li>Equilíbrio dos ecossistemas naturais.</li>
+            <li>Melhoria da qualidade de vida.</li>
+            <li>Redução do aquecimento global.</li>
+            <li>Maior produtividade agrícola sustentável.</li>
+            <li>Preservação da fauna e flora.</li>
+            <li>Uso mais eficiente dos recursos naturais.</li>
+        </ul>
+
+    </div>
+</section>
+
+<script src="../javascript/preservacao.js"></script>
 
 </body>
+</html>

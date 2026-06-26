@@ -24,7 +24,7 @@ body{
 ========================== */
 
 header{
-    background: #527954;
+    background: #434743;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -101,21 +101,21 @@ nav a:hover{
 
 .automacao-page h2{
     text-align: center;
-    color: #2e7d32;
+    color: #434743;
     font-size: 48px;
     margin-bottom: 15px;
 }
 
 .automacao-page h3{
     text-align: center;
-    color: #1b5e20;
+    color: #434743;
     font-size: 30px;
     margin-top: 50px;
     margin-bottom: 20px;
 }
 
 .automacao-page h4{
-    color: #388e3c;
+    color: #434743;
     font-size: 22px;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -188,7 +188,7 @@ nav a:hover{
 
     text-align: center;
 
-    color: #2e7d32;
+    color: #434743;
 
     margin-bottom: 20px;
 
@@ -272,7 +272,7 @@ img{
 
 .video-box h2{
     font-size: 2rem;
-    color: #2e7d32;
+    color: #434743;
     margin-bottom: 15px;
 }
 

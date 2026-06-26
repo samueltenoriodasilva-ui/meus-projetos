@@ -152,49 +152,75 @@ nav a:hover{
 }
 
 /* ==========================
-   ÍNDICE LATERAL
+   BOTÃO DO ÍNDICE
 ========================== */
 
 .btn-indice{
-    position: fixed;
-    top: 100px;
-    left: 93%;
-    z-index: 1000;
-
-    padding: 12px 18px;
-    background: #2e7d32;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+    display: none;
 }
+
+/* ==========================
+   MENU ÍNDICE
+========================== */
 
 .menu-indice{
+
     position: fixed;
-    top: 0;
-    left: -280px;
+
+    top: 120px;
+    left: 20px;
 
     width: 250px;
-    height: 100%;
 
     background: white;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
 
     padding: 20px;
-    transition: 0.3s;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+
+    z-index: 900;
+
 }
 
-.menu-indice.ativo{
-    left: 0;
+.dados-page .menu-indice h3{
+
+    text-align: center;
+
+    color: #2e7d32;
+
+    margin-bottom: 20px;
+
 }
 
 .menu-indice a{
+
     display: block;
-    padding: 10px;
-    color: #333;
+
     text-decoration: none;
+
+    color: #444;
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+
+    border-radius: 8px;
+
+    transition: .3s;
+
 }
 
+.menu-indice a:hover{
+
+    background: #e8f5e9;
+
+    color: #2e7d32;
+
+    padding-left: 18px;
+
+}
 /* ==========================
    HR / IMG
 ========================== */

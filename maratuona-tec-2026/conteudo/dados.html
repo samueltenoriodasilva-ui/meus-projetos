@@ -1,57 +1,226 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../estilos/dados.css">
     <link rel="stylesheet" href="../responsivel.css">
+
     <title>📊 Análise de Dados na Agricultura Ambiental</title>
 </head>
-<body>
 
-<!-- DADOS -->
-<section id="dados">
-    <div class="container">
-        <h2>📊 Análise de Dados na Agricultura Ambiental</h2>
+<body class="dados-page">
 
-        <h3>Como utilizar a análise de dados na agricultura ambiental?</h3>
+    <header>
 
-        <p>
-            A análise de dados permite coletar e interpretar informações do campo
-            para tomar decisões mais sustentáveis. Com o auxílio da tecnologia,
-            é possível reduzir desperdícios, aumentar a produtividade e diminuir
-            os impactos ambientais da produção agrícola.
-        </p>
+        <nav>
+            <h1>AgroTech Sustentável</h1>
 
-        <h3>Como os dados podem ser utilizados?</h3>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                ☰
+            </button>
 
-        <ul>
-            <li>Monitorar a umidade do solo para evitar o uso excessivo de água.</li>
-            <li>Acompanhar o consumo de fertilizantes e defensivos agrícolas.</li>
-            <li>Identificar áreas que necessitam de maior ou menor intervenção.</li>
-            <li>Prever períodos de seca ou excesso de chuvas.</li>
-            <li>Planejar o plantio e a colheita com base em informações climáticas.</li>
-            <li>Reduzir desperdícios e otimizar o uso dos recursos naturais.</li>
-        </ul>
+            <ul id="menu">
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="ferramentas.html">Próxima Área</a></li>
+            </ul>
+        </nav>
 
-        <h3>Benefícios para o meio ambiente</h3>
+    </header>
 
-        <ul>
-            <li>Uso mais consciente da água.</li>
-            <li>Diminuição da contaminação do solo e dos rios.</li>
-            <li>Redução de desperdícios na produção.</li>
-            <li>Maior preservação dos recursos naturais.</li>
-            <li>Produção agrícola mais eficiente e sustentável.</li>
-        </ul>
+    <!-- ANÁLISE DE DADOS -->
 
-        <h3>Recursos educativos</h3>
+    <section id="dados">
 
-        <ul>
-            <li>Exemplos práticos de agricultura de precisão.</li>
-            <li>Vídeos explicativos sobre coleta e interpretação de dados.</li>
-            <li>Materiais de estudo sobre sustentabilidade no campo.</li>
-        </ul>
-    </div>
-</section>
+        <div class="container">
+
+            <!-- MENU LATERAL -->
+
+            <button class="btn-indice" onclick="toggleIndice()">
+              📑 Índice
+            </button>
+
+            <div id="menuIndice" class="menu-indice">
+
+                <h3>📊 Conteúdos</h3>
+
+                <a href="#importancia">
+                    O que é?
+                </a>
+
+                <a href="#coleta">
+                    Como os dados são coletados
+                </a>
+
+                <a href="#aplicacoes">
+                    Aplicações na agricultura
+                </a>
+
+                <a href="#tecnologias">
+                    Tecnologias utilizadas
+                </a>
+
+                <a href="#sustentabilidade">
+                    Sustentabilidade
+                </a>
+
+                <a href="#beneficios">
+                    Benefícios
+                </a>
+
+                <a href="#recursos">
+                    Recursos de Aprendizagem
+                </a>
+
+            </div>
+
+            <h2>📊 Análise de Dados na Agricultura Ambiental</h2>
+
+            <h3 id="importancia">O que é?</h3>
+
+            <p>
+                A análise de dados na agricultura consiste na coleta, organização,
+                interpretação e utilização de informações obtidas durante todas as
+                etapas da produção agrícola. Esses dados podem ser coletados por
+                sensores, drones, satélites, máquinas agrícolas, estações
+                meteorológicas e diversos outros equipamentos tecnológicos.
+            </p>
+
+            <p>
+                Depois de coletadas, essas informações são processadas por softwares
+                especializados que apresentam gráficos, mapas e relatórios,
+                facilitando a tomada de decisões. Dessa forma, o agricultor consegue
+                produzir mais, gastar menos recursos e reduzir os impactos causados ao
+                meio ambiente.
+            </p>
+
+            <h3>A importância da análise de dados</h3>
+
+            <p>
+                Antigamente, grande parte das decisões era tomada apenas pela
+                experiência do produtor. Hoje, graças à tecnologia, é possível saber
+                exatamente onde existe falta de água, excesso de fertilizantes,
+                presença de pragas ou necessidade de correção do solo.
+            </p>
+
+            <p>
+                Isso torna a agricultura muito mais eficiente, reduzindo desperdícios
+                e aumentando a produtividade sem comprometer os recursos naturais.
+                Além disso, os dados permitem prever problemas antes mesmo que eles
+                aconteçam.
+            </p>
+
+            <h3 id="coleta">Como os dados são coletados?</h3>
+
+            <p>
+                Existem diversas formas de coletar informações no campo. Sensores
+                instalados no solo monitoram a umidade e a temperatura; drones fazem
+                imagens aéreas das plantações; satélites acompanham grandes áreas
+                agrícolas; estações meteorológicas registram chuva, vento e umidade
+                do ar; enquanto tratores e colheitadeiras registram automaticamente
+                informações durante o trabalho.
+            </p>
+
+            <p>
+                Todos esses dados são enviados para plataformas digitais que ajudam o
+                produtor a entender melhor o comportamento da lavoura e tomar decisões
+                mais rápidas e precisas.
+            </p>
+
+            <h3 id="aplicacoes">Aplicações na agricultura</h3>
+
+            <p>
+                A análise de dados pode ser utilizada em praticamente todas as etapas
+                da produção agrícola, desde o planejamento até a colheita. Com essas
+                informações, torna-se possível reduzir custos, melhorar a qualidade da
+                produção e preservar os recursos naturais.
+            </p>
+
+            <ul>
+                <li>Monitoramento da umidade do solo.</li>
+                <li>Controle inteligente da irrigação.</li>
+                <li>Identificação de áreas com baixa produtividade.</li>
+                <li>Monitoramento da saúde das plantações.</li>
+                <li>Controle do uso de fertilizantes.</li>
+                <li>Redução do uso de defensivos agrícolas.</li>
+                <li>Previsão de pragas e doenças.</li>
+                <li>Planejamento do plantio.</li>
+                <li>Planejamento da colheita.</li>
+                <li>Redução do desperdício de recursos.</li>
+            </ul>
+
+            <h3 id="tecnologias">Tecnologias utilizadas</h3>
+
+            <p>
+                A agricultura moderna utiliza diversas tecnologias para coletar e
+                analisar informações. Entre elas estão sensores inteligentes,
+                Internet das Coisas (IoT), inteligência artificial, drones, imagens
+                de satélite, GPS agrícola e softwares de gestão rural.
+            </p>
+
+            <p>
+                Essas ferramentas conseguem analisar milhares de informações em poucos
+                segundos, fornecendo ao produtor relatórios completos sobre a
+                propriedade e auxiliando na tomada de decisões mais sustentáveis.
+            </p>
+
+            <h3 id="sustentabilidade">Como contribui para a sustentabilidade?</h3>
+
+            <p>
+                A análise de dados ajuda diretamente na preservação ambiental.
+                Utilizando apenas a quantidade necessária de água, fertilizantes e
+                defensivos agrícolas, o produtor reduz desperdícios e diminui a
+                contaminação do solo, dos rios e dos lençóis freáticos.
+            </p>
+
+            <p>
+                Além disso, a redução no consumo de combustível das máquinas agrícolas
+                também contribui para diminuir a emissão de gases poluentes,
+                tornando a produção mais sustentável e preparada para os desafios do
+                futuro.
+            </p>
+
+            <h3 id="beneficios">🌱 Benefícios da Análise de Dados</h3>
+
+            <ul>
+                <li>Maior produtividade agrícola.</li>
+                <li>Redução do desperdício de água.</li>
+                <li>Uso mais eficiente de fertilizantes.</li>
+                <li>Redução dos custos de produção.</li>
+                <li>Melhor controle das plantações.</li>
+                <li>Identificação rápida de problemas.</li>
+                <li>Previsão de condições climáticas.</li>
+                <li>Maior economia de combustível.</li>
+                <li>Menor impacto ambiental.</li>
+                <li>Tomada de decisões mais inteligentes.</li>
+                <li>Melhor aproveitamento dos recursos naturais.</li>
+                <li>Agricultura mais sustentável.</li>
+            </ul>
+
+            <h3 id="recursos">📚 Recursos de Aprendizagem</h3>
+
+            <ul>
+                <li>Vídeos sobre Agricultura de Precisão.</li>
+                <li>Simuladores de monitoramento agrícola.</li>
+                <li>Mapas de produtividade.</li>
+                <li>Materiais sobre sensores inteligentes.</li>
+                <li>Conteúdos sobre drones agrícolas.</li>
+                <li>Artigos sobre Inteligência Artificial no campo.</li>
+                <li>Estudos sobre sustentabilidade agrícola.</li>
+                <li>Guias sobre interpretação de gráficos e relatórios.</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <script src="../conteudo/dados.js"></script>
 
 </body>
+
+</html>
+

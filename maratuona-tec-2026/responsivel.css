@@ -300,3 +300,60 @@
         font-size: 1rem;
     }
 }
+
+/* ==========================
+   ÍNDICE RESPONSIVO
+========================== */
+
+@media (max-width:1100px){
+
+    .btn-indice{
+
+        display:none;
+
+        position:fixed;
+
+        top:90px;
+        left:20px;
+
+        padding:12px 18px;
+
+        border:none;
+
+        border-radius:10px;
+
+        background:#2e7d32;
+
+        color:white;
+
+        cursor:pointer;
+
+        z-index:9999;
+
+    }
+
+    .dados-page .menu-indice{
+
+        top:0;
+
+        left:-280px;
+
+        width:250px;
+
+        height:100%;
+
+        border-radius:0;
+
+        transition:.35s;
+
+        z-index:9998;
+
+    }
+
+    .dados-page .menu-indice.ativo{
+
+        left:0;
+
+    }
+
+}

@@ -1,39 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../responsivel.css">
+    <link rel="stylesheet" href="../estilos/biblioteca.css">
     <title>Biblioteca</title>
 </head>
-<body>
-   <!-- BIBLIOTECA -->
-    <section id="biblioteca">
-        <div class="container">
-            <h2>📚 Biblioteca de Conteúdo</h2>
+
+
+<body class="biblioteca-page">
+
+<!-- HEADER -->
+<header>
+    <nav>
+        <h1>AgroTech Sustentável</h1>
+
+        <button class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <ul id="menu">
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="automacao.html">Automação</a></li>
+            <li><a href="agua.html">Uso da Água</a></li>
+            <li><a href="preservacao.html">Preservação</a></li>
+            <li><a href="dados.html">Análise de Dados</a></li>
+            <li><a href="ferramentas.html">Ferramentas</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- BIBLIOTECA -->
+<section id="biblioteca">
+
+    <div class="container">
+
+        <h2>📚 Biblioteca de Conteúdo</h2>
+
+        <p>
+            Esta área reúne materiais de estudo sobre sustentabilidade,
+            agricultura moderna, tecnologia no campo e inovação no agronegócio.
+            O objetivo é disponibilizar conteúdos confiáveis para aprofundar os
+            conhecimentos adquiridos nas demais áreas do projeto AgroTech
+            Sustentável.
+        </p>
+
+        <div class="biblioteca-grid">
+
+            <div class="card-material">
+                <h3>🤖 Automação Agrícola</h3>
+                <p>
+                    Materiais sobre máquinas inteligentes, sensores,
+                    monitoramento remoto e agricultura de precisão.
+                </p>
+
+                <a href="#" target="_blank">
+                    Acessar Conteúdo
+                </a>
+            </div>
+
+            <div class="card-material">
+                <h3>💧 Uso Eficiente da Água</h3>
+                <p>
+                    Estudos, pesquisas e práticas para economizar água e
+                    aumentar a produtividade agrícola.
+                </p>
+
+                <a href="#" target="_blank">
+                    Acessar Conteúdo
+                </a>
+            </div>
+
+            <div class="card-material">
+                <h3>🌱 Preservação Ambiental</h3>
+                <p>
+                    Conteúdos relacionados à conservação dos recursos naturais,
+                    reflorestamento e proteção da biodiversidade.
+                </p>
+
+                <a href="#" target="_blank">
+                    Acessar Conteúdo
+                </a>
+            </div>
+
+            <div class="card-material">
+                <h3>📊 Análise de Dados</h3>
+                <p>
+                    Aprenda como os dados ajudam produtores a tomar decisões
+                    mais eficientes e sustentáveis.
+                </p>
+
+                <a href="#" target="_blank">
+                    Acessar Conteúdo
+                </a>
+            </div>
+
+            <div class="card-material">
+                <h3>🛠 Ferramentas Tecnológicas</h3>
+                <p>
+                    Plataformas, aplicativos e softwares utilizados na gestão
+                    moderna do agronegócio.
+                </p>
+
+                <a href="#" target="_blank">
+                    Acessar Conteúdo
+                </a>
+            </div>
+
+            <div class="card-material">
+                <h3>📄 PDFs e Apostilas</h3>
+                <p>
+                    Espaço destinado a materiais complementares para download.
+                </p>
+
+                <a href="#" target="_blank">
+                    Baixar Material
+                </a>
+            </div>
+
+        </div>
+
+        <div class="destaque">
+
+            <h3>🎯 Objetivo da Biblioteca</h3>
 
             <p>
-                Espaço dedicado ao aprofundamento dos estudos.
+                A Biblioteca do AgroTech Sustentável funciona como um centro de
+                aprendizado, reunindo vídeos, artigos, pesquisas, apostilas e
+                ferramentas úteis para estudantes, professores e interessados
+                em sustentabilidade e tecnologia aplicada ao agronegócio.
             </p>
 
-            <ul>
-                <li>Artigos.</li>
-                <li>PDFs.</li>
-                <li>Vídeos.</li>
-                <li>Links para materiais educativos.</li>
-            </ul>
-
-            <div class="destaque">
-                <h3>Diferencial do Projeto</h3>
-
-                <p>
-                    O AgroTech Sustentável reúne conceitos, dicas práticas,
-                    materiais de estudo e recursos multimídia em um único local,
-                    facilitando o aprendizado sobre sustentabilidade e tecnologia
-                    aplicada ao agronegócio.
-                </p>
-            </div>
         </div>
-    </section>
+
+    </div>
+
+</section>
+
+<!-- VÍDEO -->
+<section class="video-box">
+
+    <h2>🎥 Assista ao Vídeo</h2>
+
+    <p>
+        Confira este vídeo para entender melhor como a tecnologia e a
+        sustentabilidade trabalham juntas na agricultura moderna.
+    </p>
+
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/drRtE_5h7zI?si=j2Mj5Dist2cCH_cE"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+</section>
+
+<script src="../javascript/biblioteca.js"></script>
+
 </body>

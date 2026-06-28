@@ -357,3 +357,27 @@
     }
 
 }
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media(max-width:768px){
+
+    .biblioteca-page .container{
+        padding: 20px 15px;
+    }
+
+    .biblioteca-page h2{
+        font-size: 1.7rem;
+    }
+
+    .card-material{
+        padding: 20px;
+    }
+
+    .card-material h3{
+        font-size: 1.2rem;
+    }
+
+}

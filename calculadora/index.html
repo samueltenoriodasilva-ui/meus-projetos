@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <title>Calculadora PT</title>
+
+    <title>Calculadora de Craft</title>
 
     <style>
         * {
@@ -16,10 +18,11 @@
 
         body {
             background: #0f172a;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px;
         }
 
         main {
@@ -27,7 +30,7 @@
             max-width: 900px;
         }
 
-        section#login {
+        section#calculadora {
             background: #020617;
             display: flex;
             border-radius: 15px;
@@ -36,36 +39,37 @@
         }
 
         #imagem {
-    width: 50%;
-    background-color: #020617;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+            width: 45%;
+            background: #020617;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-#imagem img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    border-radius: 12px;           /* bordas arredondadas leves */
-    box-shadow: 0 0 25px rgba(0,0,0,0.6); /* sombra suave */
-    background-color: #ffffff;     /* fundo branco pra destacar */
-    padding: 10px;
-}
-
+        #imagem img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.6);
+            background: #ffffff;
+            padding: 10px;
+        }
 
         #formulario {
-            width: 50%;
+            width: 55%;
             padding: 30px;
             color: #e5e7eb;
         }
 
-        h1, p {
+        h1 {
             text-align: center;
+            margin-bottom: 8px;
         }
 
         p {
+            text-align: center;
             font-size: 14px;
             margin-bottom: 20px;
             color: #ffffff;
@@ -78,7 +82,7 @@
             border: 1px solid #26313b;
             border-radius: 8px;
             margin-bottom: 15px;
-            padding: 8px;
+            padding: 10px;
         }
 
         .campo span {
@@ -86,12 +90,14 @@
             margin-right: 8px;
         }
 
-        .campo input, .campo select {
+        .campo input,
+        .campo select {
             background: transparent;
             border: none;
             outline: none;
             color: #e5e7eb;
             width: 100%;
+            font-size: 15px;
         }
 
         .campo select option {
@@ -100,7 +106,7 @@
 
         .enviar input {
             width: 100%;
-            padding: 10px;
+            padding: 11px;
             border: none;
             border-radius: 8px;
             background: #13145c;
@@ -118,197 +124,531 @@
             background: #020617;
             border: 1px solid #4d6072;
             border-radius: 8px;
-            padding: 10px;
+            padding: 15px;
             font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .titulo-resultado {
+            font-size: 18px;
+            color: #60a5fa;
+            margin-bottom: 10px;
+        }
+
+        .material {
+            padding: 4px 0;
         }
 
         @media (max-width: 768px) {
-            section#login {
+
+            body {
+                padding: 10px;
+            }
+
+            section#calculadora {
                 flex-direction: column;
             }
 
-              #imagem {
-                 width: 100%;
-                 height: 200px;
-                background-size: contain;
+            #imagem {
+                width: 100%;
+                height: 200px;
             }
 
             #formulario {
                 width: 100%;
+                padding: 25px 20px;
             }
         }
     </style>
 </head>
+
 <body>
 
 <main>
-    <section id="login">
-        <div id="imagem">
-    <img src="fotos/dinastia.png" alt="DINASTIA">
-</div>
 
+    <section id="calculadora">
+
+        <div id="imagem">
+            <img src="fotos/dinastia.png" alt="DINASTIA">
+        </div>
 
         <div id="formulario">
-            <h1>Calculadora de PT</h1>
-            <p><strong>Materiais + divisão</strong></p>
 
-            <!-- Quantidade -->
-            <div class="campo">
-                <span class="material-symbols-outlined">inventory_2</span>
-                <input type="number" id="qtd" placeholder="Quantidade de PT">
-            </div>
+            <h1>Calculadora de Craft</h1>
 
-            <!-- Select de valores -->
+            <p>
+                <strong>Escolha o craft e informe a quantidade</strong>
+            </p>
+
+            <!-- TIPO DE CRAFT -->
             <div class="campo">
-                <span class="material-symbols-outlined">payments</span>
-                <select id="valorSelect">
-                    <option value="">Selecione o valor da PT</option>
-                    <option value="60000">60.000</option>
-                    <option value="65000">65.000</option>
-                    <option value="70000">70.000</option>
-                    <option value="73000">73.000</option>
-                    <option value="75000">75.000</option>
+
+                <span class="material-symbols-outlined">
+                    construction
+                </span>
+
+                <select id="craft">
+
+                    <option value="">
+                        Selecione o craft
+                    </option>
+
+                    <option value="uzi">
+                        🔫 UZI
+                    </option>
+
+                    <option value="aug">
+                        🔫 AUG
+                    </option>
+
+                    <option value="pecaMedia">
+                        🛠️ Peça de Arma Média
+                    </option>
+
+                    <option value="parafuso">
+                        🔩 Parafuso Pequeno
+                    </option>
+
                 </select>
+
             </div>
 
-            <!-- Valor manual -->
+            <div id="quantidadesCraft" style="display: none; margin-bottom: 15px;">
+
+    <div class="campo">
+        <span class="material-symbols-outlined">build</span>
+        <input type="text" id="pecasMedia" readonly>
+    </div>
+
+    <div class="campo">
+        <span class="material-symbols-outlined">settings</span>
+        <input type="text" id="parafusos" readonly>
+    </div>
+
+</div>
+
+            <!-- QUANTIDADE -->
+
             <div class="campo">
-                <span class="material-symbols-outlined">edit</span>
-                <input type="number" id="valorManual" placeholder="Ou digite o valor manual">
+
+                <span class="material-symbols-outlined">
+                    inventory_2
+                </span>
+
+                <input
+                    type="number"
+                    id="qtd"
+                    min="1"
+                    placeholder="Quantidade"
+                >
+
             </div>
+
+            <!-- BOTÃO -->
 
             <div class="enviar">
-                <input type="button" value="Calcular" onclick="calcular()">
+
+                <input
+                    type="button"
+                    value="Calcular"
+                    onclick="calcular()"
+                >
+
             </div>
 
-            <div class="resultado" id="resultado"></div>
+            <!-- RESULTADO -->
+
+            <div
+                class="resultado"
+                id="resultado"
+            >
+                Selecione um craft e informe a quantidade.
+            </div>
+
         </div>
+
     </section>
+
 </main>
 
+
 <script>
+
+function formatar(numero) {
+
+    return numero.toLocaleString("pt-BR");
+
+}
+
+
 function calcular() {
-    let qtd = Number(document.getElementById("qtd").value);
-    let valorSelect = Number(document.getElementById("valorSelect").value);
-    let valorManual = Number(document.getElementById("valorManual").value);
 
-    let valorPT = valorManual > 0 ? valorManual : valorSelect;
+    const craft =
+        document.getElementById("craft").value;
 
-    if (!qtd || !valorPT) {
-        document.getElementById("resultado").innerHTML = "Preencha todos os campos.";
+    const qtd =
+        Number(document.getElementById("qtd").value);
+
+    const resultado =
+        document.getElementById("resultado");
+
+
+    // VALIDAÇÃO
+
+    if (!craft || !qtd || qtd <= 0) {
+
+        resultado.innerHTML = `
+            <span style="color:#f87171;">
+                ❌ Selecione um craft e informe uma quantidade válida.
+            </span>
+        `;
+
         return;
+
     }
 
-    // Materiais
-    let metal = 150 * qtd;
-    let cobre = 150 * qtd;
-    let vidro = 175 * qtd;
-    let plastico = 175 * qtd;
-    let borracha = 175 * qtd;
 
-    let corpoPistola = 1 * qtd;
-    let pecaArmaLeve = 1 * qtd;
+    let html = "";
 
-    let totalMateriais = 825 * qtd;
-    let totalValor = valorPT * qtd;
 
-    // ---------- DESCONTO CONDICIONAL POR QUANTIDADE ----------
-    let descontoPercentual = 0;
-    let descontoValorUnitario = 0;
-    let regraAtendida = false;
-const PRECO_BASE = 75000;
-const PRECO_5_9 = 73000;
-const PRECO_10_19 = 70000;
-const PRECO_20 = 65000;
-const PRECO_PARCEIRA = 60000;
+    // =========================
+    // UZI
+    // =========================
 
-regraAtendida = false;
-descontoPercentual = 0;
-descontoValorUnitario = 0;
+    if (craft === "uzi") {
 
-// PARCERIA — sempre válido
-if (valorPT === PRECO_PARCEIRA) {
-    descontoPercentual = 20;
-    descontoValorUnitario = 15000;
-    valorFinalUnitario = PRECO_PARCEIRA;
-    regraAtendida = true;
-}
+        const sujo = 500 * qtd;
 
-// SEM PARCERIA
-else {
+        const pecaMedia = 2 * qtd;
 
-    // abaixo de 5 PT → sem desconto
-    if (qtd < 5 && valorPT === PRECO_BASE) {
-        valorFinalUnitario = PRECO_BASE;
+        const parafuso = 3 * qtd;
+
+
+        html = `
+
+            <div class="titulo-resultado">
+                🔫 UZI × ${formatar(qtd)}
+            </div>
+
+            <strong>Materiais necessários:</strong>
+
+            <div class="material">
+                🩸 Sujo: <strong>${formatar(sujo)}x</strong>
+            </div>
+
+            <div class="material">
+                🛠️ Peças de Arma Média:
+                <strong>${formatar(pecaMedia)}x</strong>
+            </div>
+
+            <div class="material">
+                🔩 Parafusos Pequenos:
+                <strong>${formatar(parafuso)}x</strong>
+            </div>
+
+        `;
+
     }
 
-    // 5 a 9 PT → somente 73k
-    else if (qtd >= 5 && qtd < 10 && valorPT === PRECO_5_9) {
-        valorFinalUnitario = PRECO_5_9;
-        descontoPercentual = 2.5;
-        descontoValorUnitario = 1875;
-        regraAtendida = true;
+
+    // =========================
+    // AUG
+    // =========================
+
+    else if (craft === "aug") {
+
+        const sujo = 500 * qtd;
+
+        const pecaMedia = 4 * qtd;
+
+        const parafuso = 3 * qtd;
+
+
+        html = `
+
+            <div class="titulo-resultado">
+                🔫 AUG × ${formatar(qtd)}
+            </div>
+
+            <strong>Materiais necessários:</strong>
+
+            <div class="material">
+                🩸 Sujo: <strong>${formatar(sujo)}x</strong>
+            </div>
+
+            <div class="material">
+                🛠️ Peças de Arma Média:
+                <strong>${formatar(pecaMedia)}x</strong>
+            </div>
+
+            <div class="material">
+                🔩 Parafusos Pequenos:
+                <strong>${formatar(parafuso)}x</strong>
+            </div>
+
+        `;
+
     }
 
-    // 10 a 19 PT → somente 70k
-    else if (qtd >= 10 && qtd < 20 && valorPT === PRECO_10_19) {
-        valorFinalUnitario = PRECO_10_19;
-        descontoPercentual = 6.25;
-        descontoValorUnitario = 4700;
-        regraAtendida = true;
+
+    // =========================
+    // PEÇA DE ARMA MÉDIA
+    // =========================
+
+    else if (craft === "pecaMedia") {
+
+        const borracha = 30 * qtd;
+
+        const vidro = 30 * qtd;
+
+        const cobre = 30 * qtd;
+
+        const aluminio = 30 * qtd;
+
+        const corpoSub = 1 * qtd;
+
+        const pecaArma = 1 * qtd;
+
+        const sujo = 1000 * qtd;
+
+
+        html = `
+
+            <div class="titulo-resultado">
+                🛠️ Peça de Arma Média × ${formatar(qtd)}
+            </div>
+
+            <strong>Materiais necessários:</strong>
+
+            <div class="material">
+                🛞 Borrachas:
+                <strong>${formatar(borracha)}x</strong>
+            </div>
+
+            <div class="material">
+                🪟 Vidro:
+                <strong>${formatar(vidro)}x</strong>
+            </div>
+
+            <div class="material">
+                🔩 Cobre:
+                <strong>${formatar(cobre)}x</strong>
+            </div>
+
+            <div class="material">
+                ⚙️ Alumínio:
+                <strong>${formatar(aluminio)}x</strong>
+            </div>
+
+            <div class="material">
+                🔧 Corpo de Sub:
+                <strong>${formatar(corpoSub)}x</strong>
+            </div>
+
+            <div class="material">
+                🔫 Peças de Arma:
+                <strong>${formatar(pecaArma)}x</strong>
+            </div>
+
+            <div class="material">
+                🩸 Sujo:
+                <strong>${formatar(sujo)}x</strong>
+            </div>
+
+        `;
+
     }
 
-    // 20+ PT → somente 65k
-    else if (qtd >= 20 && valorPT === PRECO_20) {
-        valorFinalUnitario = PRECO_20;
-        descontoPercentual = 13.33;
-        descontoValorUnitario = 10000;
-        regraAtendida = true;
+
+    // =========================
+    // PARAFUSO PEQUENO
+    // =========================
+
+    else if (craft === "parafuso") {
+
+        const barraFerro = 3 * qtd;
+
+        const sujo = 300 * qtd;
+
+
+        html = `
+
+            <div class="titulo-resultado">
+                🔩 Parafuso Pequeno × ${formatar(qtd)}
+            </div>
+
+            <strong>Materiais necessários:</strong>
+
+            <div class="material">
+                ⚙️ Barra de Ferro:
+                <strong>${formatar(barraFerro)}x</strong>
+            </div>
+
+            <div class="material">
+                🩸 Sujo:
+                <strong>${formatar(sujo)}x</strong>
+            </div>
+
+        `;
+
     }
+    // =========================
+// UZI
+// =========================
 
-    // qualquer tentativa fora da regra
-    else {
-        regraAtendida = false;
-        descontoPercentual = 0;
-        descontoValorUnitario = 0;
-    }
-}
+if (craft === "uzi") {
 
-    let mensagemDesconto = "";
+    const sujo = 500 * qtd;
+    const pecaMedia = 2 * qtd;
+    const parafuso = 3 * qtd;
 
-    if (regraAtendida) {
-        mensagemDesconto = `<span style="color:#22c55e;"><strong>✔ Desconto aplicado</strong></span>`;
-    } else {
-        mensagemDesconto = `<span style="color:#f87171;"><strong>✖ Desconto não aplicado</strong><br>
-        Não atingiu a quantidade mínima.</span>`;
-    }
+    const valorLimpo = 40000 * qtd;
+    const valorSujo = 52000 * qtd;
 
-    // valores com e sem desconto
-    let valorComDescontoUnitario = valorPT - descontoValorUnitario;
-    let totalDesconto = descontoValorUnitario * qtd;
-    let totalComDesconto = totalValor - totalDesconto;
+    html = `
 
-    document.getElementById("resultado").innerHTML = `
-        <div style="line-height: 1.8;">
+        <div class="titulo-resultado">
+            🔫 UZI × ${formatar(qtd)}
+        </div>
 
-        <strong>📦 Materiais Necessários</strong><br><br>
-        Metal: ${metal}<br>
-        Cobre: ${cobre}<br>
-        Vidro: ${vidro}<br>
-        Plástico: ${plastico}<br>
-        Borracha: ${borracha}<br>
-        Corpo de Pistola: ${corpoPistola}<br>
-        Peça de Arma Leve: ${pecaArmaLeve}<br><br>
+        <strong>Materiais necessários:</strong>
 
-        <strong>🔢 Total de Materiais:</strong> ${totalMateriais}<br><br>
+        <div class="material">
+            🩸 Sujo: <strong>${formatar(sujo)}x</strong>
+        </div>
 
-        <strong>💰 Valor por PT</strong><br>
-        Valor Base: R$ ${valorPT.toLocaleString("pt-BR")}<br><br>
-        ${mensagemDesconto}<br>
-        Desconto: ${descontoPercentual}% (R$ ${descontoValorUnitario.toLocaleString("pt-BR")})<br><br>
+        <div class="material">
+            🛠️ Peças de Arma Média:
+            <strong>${formatar(pecaMedia)}x</strong>
+        </div>
 
-        <strong>📊 Total Geral</strong><br>
-        Valor com desconto: R$ ${totalValor.toLocaleString("pt-BR")}<br>
+        <div class="material">
+            🔩 Parafusos Pequenos:
+            <strong>${formatar(parafuso)}x</strong>
+        </div>
+
+        <br>
+
+        <strong>💰 Valor da UZI:</strong>
+
+        <div class="material">
+            💵 Limpo:
+            <strong>R$ ${formatar(valorLimpo)}</strong>
+        </div>
+
+        <div class="material">
+            🩸 Sujo:
+            <strong>R$ ${formatar(valorSujo)}</strong>
+        </div>
+
     `;
+
 }
+
+
+// =========================
+// AUG
+// =========================
+
+else if (craft === "aug") {
+
+    const sujo = 500 * qtd;
+    const pecaMedia = 4 * qtd;
+    const parafuso = 3 * qtd;
+
+    const valorLimpo = 160000 * qtd;
+    const valorSujo = 208000 * qtd;
+
+    html = `
+
+        <div class="titulo-resultado">
+            🔫 AUG × ${formatar(qtd)}
+        </div>
+
+        <strong>Materiais necessários:</strong>
+
+        <div class="material">
+            🩸 Sujo: <strong>${formatar(sujo)}x</strong>
+        </div>
+
+        <div class="material">
+            🛠️ Peças de Arma Média:
+            <strong>${formatar(pecaMedia)}x</strong>
+        </div>
+
+        <div class="material">
+            🔩 Parafusos Pequenos:
+            <strong>${formatar(parafuso)}x</strong>
+        </div>
+
+        <br>
+
+        <strong>💰 Valor da AUG:</strong>
+
+        <div class="material">
+            💵 Limpo:
+            <strong>R$ ${formatar(valorLimpo)}</strong>
+        </div>
+
+        <div class="material">
+            🩸 Sujo:
+            <strong>R$ ${formatar(valorSujo)}</strong>
+        </div>
+
+    `;
+
+
+    const craftSelect = document.getElementById("craft");
+const qtdInput = document.getElementById("qtd");
+
+function atualizarCrafts() {
+
+    const craft = craftSelect.value;
+    const qtd = Number(qtdInput.value);
+
+    const caixa = document.getElementById("quantidadesCraft");
+    const pecasMedia = document.getElementById("pecasMedia");
+    const parafusos = document.getElementById("parafusos");
+
+    // Só aparece para UZI e AUG
+    if ((craft === "uzi" || craft === "aug") && qtd > 0) {
+
+        let quantidadeMedia = 0;
+        let quantidadeParafuso = 3 * qtd;
+
+        if (craft === "uzi") {
+            quantidadeMedia = 2 * qtd;
+        }
+
+        if (craft === "aug") {
+            quantidadeMedia = 4 * qtd;
+        }
+
+        pecasMedia.value =
+            `Peças de Arma Média: ${quantidadeMedia}x`;
+
+        parafusos.value =
+            `Parafusos Pequenos: ${quantidadeParafuso}x`;
+
+        caixa.style.display = "block";
+
+    } else {
+
+        caixa.style.display = "none";
+
+    }
+}
+
+craftSelect.addEventListener("change", atualizarCrafts);
+qtdInput.addEventListener("input", atualizarCrafts);
+}
+
+
+    resultado.innerHTML = html;
+
+}
+
 </script>
+
+</body>
+</html>

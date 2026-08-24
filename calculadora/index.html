@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 
-    <title>Calculadora de Craft</title>
+    <title>Calculadora de Produção</title>
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -27,7 +30,7 @@
 
         main {
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
         }
 
         section#calculadora {
@@ -35,11 +38,13 @@
             display: flex;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 0 20px rgba(0,0,0,0.6);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
         }
 
+        /* IMAGEM */
+
         #imagem {
-            width: 45%;
+            width: 40%;
             background: #020617;
             display: flex;
             justify-content: center;
@@ -52,13 +57,15 @@
             max-height: 90%;
             object-fit: contain;
             border-radius: 12px;
-            box-shadow: 0 0 25px rgba(0,0,0,0.6);
-            background: #ffffff;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+            background-color: #ffffff;
             padding: 10px;
         }
 
+        /* FORMULÁRIO */
+
         #formulario {
-            width: 55%;
+            width: 60%;
             padding: 30px;
             color: #e5e7eb;
         }
@@ -75,6 +82,8 @@
             color: #ffffff;
         }
 
+        /* CAMPOS */
+
         .campo {
             display: flex;
             align-items: center;
@@ -90,8 +99,7 @@
             margin-right: 8px;
         }
 
-        .campo input,
-        .campo select {
+        .campo input {
             background: transparent;
             border: none;
             outline: none;
@@ -100,9 +108,7 @@
             font-size: 15px;
         }
 
-        .campo select option {
-            color: black;
-        }
+        /* BOTÃO */
 
         .enviar input {
             width: 100%;
@@ -119,6 +125,8 @@
             background: #1618a3;
         }
 
+        /* RESULTADO */
+
         .resultado {
             margin-top: 20px;
             background: #020617;
@@ -130,14 +138,30 @@
         }
 
         .titulo-resultado {
-            font-size: 18px;
+            font-size: 19px;
             color: #60a5fa;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+        }
+
+        .secao {
+            margin-top: 18px;
+            padding-top: 12px;
+            border-top: 1px solid #26313b;
         }
 
         .material {
-            padding: 4px 0;
+            padding: 3px 0;
         }
+
+        .valor {
+            color: #22c55e;
+        }
+
+        .sujo {
+            color: #f87171;
+        }
+
+        /* RESPONSIVO */
 
         @media (max-width: 768px) {
 
@@ -159,6 +183,7 @@
                 padding: 25px 20px;
             }
         }
+
     </style>
 </head>
 
@@ -168,66 +193,30 @@
 
     <section id="calculadora">
 
+        <!-- IMAGEM -->
+
         <div id="imagem">
-            <img src="fotos/dinastia.png" alt="DINASTIA">
+
+            <img
+                src="fotos/dinastia.png"
+                alt="DINASTIA"
+            >
+
         </div>
+
+
+        <!-- FORMULÁRIO -->
 
         <div id="formulario">
 
-            <h1>Calculadora de Craft</h1>
+            <h1>Calculadora de Produção</h1>
 
             <p>
-                <strong>Escolha o craft e informe a quantidade</strong>
+                <strong>UZI + AUG + Materiais</strong>
             </p>
 
-            <!-- TIPO DE CRAFT -->
-            <div class="campo">
 
-                <span class="material-symbols-outlined">
-                    construction
-                </span>
-
-                <select id="craft">
-
-                    <option value="">
-                        Selecione o craft
-                    </option>
-
-                    <option value="uzi">
-                        🔫 UZI
-                    </option>
-
-                    <option value="aug">
-                        🔫 AUG
-                    </option>
-
-                    <option value="pecaMedia">
-                        🛠️ Peça de Arma Média
-                    </option>
-
-                    <option value="parafuso">
-                        🔩 Parafuso Pequeno
-                    </option>
-
-                </select>
-
-            </div>
-
-            <div id="quantidadesCraft" style="display: none; margin-bottom: 15px;">
-
-    <div class="campo">
-        <span class="material-symbols-outlined">build</span>
-        <input type="text" id="pecasMedia" readonly>
-    </div>
-
-    <div class="campo">
-        <span class="material-symbols-outlined">settings</span>
-        <input type="text" id="parafusos" readonly>
-    </div>
-
-</div>
-
-            <!-- QUANTIDADE -->
+            <!-- UZI -->
 
             <div class="campo">
 
@@ -237,12 +226,49 @@
 
                 <input
                     type="number"
-                    id="qtd"
-                    min="1"
-                    placeholder="Quantidade"
+                    id="qtdUzi"
+                    min="0"
+                    placeholder="Quantidade de UZI"
+                    oninput="atualizarPrevia()"
                 >
 
             </div>
+
+
+            <!-- AUG -->
+
+            <div class="campo">
+
+                <span class="material-symbols-outlined">
+                    inventory_2
+                </span>
+
+                <input
+                    type="number"
+                    id="qtdAug"
+                    min="0"
+                    placeholder="Quantidade de AUG"
+                    oninput="atualizarPrevia()"
+                >
+
+            </div>
+
+
+            <!-- PRÉVIA DOS CRAFTS -->
+
+            <div
+                id="previa"
+                style="
+                    display:none;
+                    background:#020617;
+                    border:1px solid #26313b;
+                    border-radius:8px;
+                    padding:12px;
+                    margin-bottom:15px;
+                    line-height:1.8;
+                "
+            ></div>
+
 
             <!-- BOTÃO -->
 
@@ -250,11 +276,12 @@
 
                 <input
                     type="button"
-                    value="Calcular"
+                    value="Calcular Produção"
                     onclick="calcular()"
                 >
 
             </div>
+
 
             <!-- RESULTADO -->
 
@@ -262,7 +289,7 @@
                 class="resultado"
                 id="resultado"
             >
-                Selecione um craft e informe a quantidade.
+                Informe a quantidade de UZI e/ou AUG.
             </div>
 
         </div>
@@ -275,377 +302,317 @@
 <script>
 
 function formatar(numero) {
-
     return numero.toLocaleString("pt-BR");
-
 }
 
+function calcularProducao(qtdUzi, qtdAug) {
+
+    // Craft direto das armas
+    const pecasArmaMedia = (qtdUzi * 2) + (qtdAug * 4);
+    const parafusosPequenos = (qtdUzi * 3) + (qtdAug * 3);
+
+    // Receita de 1 Peça de Arma Média
+    const receitaPecaMedia = {
+        borracha: 30,
+        vidro: 30,
+        cobre: 30,
+        aluminio: 30,
+        corpoSub: 1,
+        pecaArma: 1,
+        sujo: 1000
+    };
+
+    // Total para as Peças de Arma Média
+    const borracha = pecasArmaMedia * receitaPecaMedia.borracha;
+    const vidro = pecasArmaMedia * receitaPecaMedia.vidro;
+    const cobre = pecasArmaMedia * receitaPecaMedia.cobre;
+    const aluminio = pecasArmaMedia * receitaPecaMedia.aluminio;
+    const corpoSub = pecasArmaMedia * receitaPecaMedia.corpoSub;
+    const pecaArma = pecasArmaMedia * receitaPecaMedia.pecaArma;
+    const sujoPecas = pecasArmaMedia * receitaPecaMedia.sujo;
+
+    // Receita de 1 Parafuso Pequeno
+    const receitaParafuso = {
+        barraFerro: 3,
+        sujo: 300
+    };
+
+    // Total para os Parafusos Pequenos
+    const barraFerro = parafusosPequenos * receitaParafuso.barraFerro;
+    const sujoParafusos = parafusosPequenos * receitaParafuso.sujo;
+
+    // Sujo das armas
+    const sujoArmas = (qtdUzi + qtdAug) * 500;
+
+    // Sujo total da produção
+    const sujoTotal = sujoArmas + sujoPecas + sujoParafusos;
+
+    return {
+        qtdUzi,
+        qtdAug,
+        pecasArmaMedia,
+        parafusosPequenos,
+        receitaPecaMedia,
+        receitaParafuso,
+        borracha,
+        vidro,
+        cobre,
+        aluminio,
+        corpoSub,
+        pecaArma,
+        barraFerro,
+        sujoArmas,
+        sujoPecas,
+        sujoParafusos,
+        sujoTotal
+    };
+}
+
+function atualizarPrevia() {
+
+    const qtdUzi = Number(document.getElementById("qtdUzi").value) || 0;
+    const qtdAug = Number(document.getElementById("qtdAug").value) || 0;
+    const previa = document.getElementById("previa");
+
+    if (qtdUzi <= 0 && qtdAug <= 0) {
+        previa.style.display = "none";
+        return;
+    }
+
+    const p = calcularProducao(qtdUzi, qtdAug);
+
+    previa.style.display = "block";
+
+    previa.innerHTML = `
+        <strong style="color:#60a5fa;">📦 Crafts necessários</strong>
+        <br><br>
+
+        🔫 UZI:
+        <strong>${formatar(qtdUzi)}x</strong>
+        <br>
+
+        🔫 AUG:
+        <strong>${formatar(qtdAug)}x</strong>
+        <br><br>
+
+        🛠️ Peças de Arma Média:
+        <strong>${formatar(p.pecasArmaMedia)}x</strong>
+        <br>
+
+        🔩 Parafusos Pequenos:
+        <strong>${formatar(p.parafusosPequenos)}x</strong>
+    `;
+}
 
 function calcular() {
 
-    const craft =
-        document.getElementById("craft").value;
+    const qtdUzi = Number(document.getElementById("qtdUzi").value) || 0;
+    const qtdAug = Number(document.getElementById("qtdAug").value) || 0;
+    const resultado = document.getElementById("resultado");
 
-    const qtd =
-        Number(document.getElementById("qtd").value);
-
-    const resultado =
-        document.getElementById("resultado");
-
-
-    // VALIDAÇÃO
-
-    if (!craft || !qtd || qtd <= 0) {
-
+    if (qtdUzi <= 0 && qtdAug <= 0) {
         resultado.innerHTML = `
             <span style="color:#f87171;">
-                ❌ Selecione um craft e informe uma quantidade válida.
+                ❌ Informe pelo menos uma UZI ou uma AUG.
             </span>
         `;
-
         return;
-
     }
 
+    const p = calcularProducao(qtdUzi, qtdAug);
 
-    let html = "";
+    // Valores das armas
+    const valorUziLimpo = qtdUzi * 40000;
+    const valorUziSujo = qtdUzi * 52000;
 
+    const valorAugLimpo = qtdAug * 160000;
+    const valorAugSujo = qtdAug * 208000;
 
-    // =========================
-    // UZI
-    // =========================
+    const valorTotalLimpo = valorUziLimpo + valorAugLimpo;
+    const valorTotalSujo = valorUziSujo + valorAugSujo;
 
-    if (craft === "uzi") {
+    resultado.innerHTML = `
 
-        const sujo = 500 * qtd;
+        <div class="titulo-resultado">
+            📊 Resultado da Produção
+        </div>
 
-        const pecaMedia = 2 * qtd;
+        <strong>🔫 Armas</strong>
 
-        const parafuso = 3 * qtd;
+        <div class="material">
+            UZI: <strong>${formatar(qtdUzi)}x</strong>
+        </div>
 
+        <div class="material">
+            AUG: <strong>${formatar(qtdAug)}x</strong>
+        </div>
 
-        html = `
+        <div class="secao">
+            <strong>💰 Valor das Armas</strong>
 
-            <div class="titulo-resultado">
-                🔫 UZI × ${formatar(qtd)}
-            </div>
+            ${qtdUzi > 0 ? `
+                <div class="material">
+                    UZI — 💵 Limpo:
+                    <span class="valor">R$ ${formatar(valorUziLimpo)}</span>
+                </div>
 
-            <strong>Materiais necessários:</strong>
+                <div class="material">
+                    UZI — 🩸 Sujo:
+                    <span class="sujo">R$ ${formatar(valorUziSujo)}</span>
+                </div>
+            ` : ""}
 
-            <div class="material">
-                🩸 Sujo: <strong>${formatar(sujo)}x</strong>
-            </div>
+            ${qtdAug > 0 ? `
+                <div class="material">
+                    AUG — 💵 Limpo:
+                    <span class="valor">R$ ${formatar(valorAugLimpo)}</span>
+                </div>
 
-            <div class="material">
-                🛠️ Peças de Arma Média:
-                <strong>${formatar(pecaMedia)}x</strong>
-            </div>
+                <div class="material">
+                    AUG — 🩸 Sujo:
+                    <span class="sujo">R$ ${formatar(valorAugSujo)}</span>
+                </div>
+            ` : ""}
+        </div>
 
-            <div class="material">
-                🔩 Parafusos Pequenos:
-                <strong>${formatar(parafuso)}x</strong>
-            </div>
-
-        `;
-
-    }
-
-
-    // =========================
-    // AUG
-    // =========================
-
-    else if (craft === "aug") {
-
-        const sujo = 500 * qtd;
-
-        const pecaMedia = 4 * qtd;
-
-        const parafuso = 3 * qtd;
-
-
-        html = `
-
-            <div class="titulo-resultado">
-                🔫 AUG × ${formatar(qtd)}
-            </div>
-
-            <strong>Materiais necessários:</strong>
+        <div class="secao">
+            <strong>🛠️ Crafts Necessários</strong>
 
             <div class="material">
-                🩸 Sujo: <strong>${formatar(sujo)}x</strong>
+                Peças de Arma Média:
+                <strong>${formatar(p.pecasArmaMedia)}x</strong>
             </div>
 
             <div class="material">
-                🛠️ Peças de Arma Média:
-                <strong>${formatar(pecaMedia)}x</strong>
+                Parafusos Pequenos:
+                <strong>${formatar(p.parafusosPequenos)}x</strong>
             </div>
+        </div>
 
-            <div class="material">
-                🔩 Parafusos Pequenos:
-                <strong>${formatar(parafuso)}x</strong>
-            </div>
+        <div class="secao">
+            <strong>🛠️ Para fazer 1 Peça de Arma Média:</strong>
 
-        `;
+            <div class="material">🛞 30x Borrachas</div>
+            <div class="material">🪟 30x Vidro</div>
+            <div class="material">🔩 30x Cobre</div>
+            <div class="material">⚙️ 30x Alumínio</div>
+            <div class="material">🔧 1x Corpo de Sub</div>
+            <div class="material">🔫 1x Peça de Arma</div>
+            <div class="material">🩸 1000x Sujo</div>
+        </div>
 
-    }
-
-
-    // =========================
-    // PEÇA DE ARMA MÉDIA
-    // =========================
-
-    else if (craft === "pecaMedia") {
-
-        const borracha = 30 * qtd;
-
-        const vidro = 30 * qtd;
-
-        const cobre = 30 * qtd;
-
-        const aluminio = 30 * qtd;
-
-        const corpoSub = 1 * qtd;
-
-        const pecaArma = 1 * qtd;
-
-        const sujo = 1000 * qtd;
-
-
-        html = `
-
-            <div class="titulo-resultado">
-                🛠️ Peça de Arma Média × ${formatar(qtd)}
-            </div>
-
-            <strong>Materiais necessários:</strong>
+        <div class="secao">
+            <strong>
+                📦 Total para ${formatar(p.pecasArmaMedia)}
+                Peças de Arma Média:
+            </strong>
 
             <div class="material">
                 🛞 Borrachas:
-                <strong>${formatar(borracha)}x</strong>
+                <strong>${formatar(p.borracha)}x</strong>
             </div>
 
             <div class="material">
                 🪟 Vidro:
-                <strong>${formatar(vidro)}x</strong>
+                <strong>${formatar(p.vidro)}x</strong>
             </div>
 
             <div class="material">
                 🔩 Cobre:
-                <strong>${formatar(cobre)}x</strong>
+                <strong>${formatar(p.cobre)}x</strong>
             </div>
 
             <div class="material">
                 ⚙️ Alumínio:
-                <strong>${formatar(aluminio)}x</strong>
+                <strong>${formatar(p.aluminio)}x</strong>
             </div>
 
             <div class="material">
                 🔧 Corpo de Sub:
-                <strong>${formatar(corpoSub)}x</strong>
+                <strong>${formatar(p.corpoSub)}x</strong>
             </div>
 
             <div class="material">
                 🔫 Peças de Arma:
-                <strong>${formatar(pecaArma)}x</strong>
+                <strong>${formatar(p.pecaArma)}x</strong>
             </div>
 
             <div class="material">
                 🩸 Sujo:
-                <strong>${formatar(sujo)}x</strong>
+                <strong>${formatar(p.sujoPecas)}</strong>
             </div>
+        </div>
 
-        `;
+        <div class="secao">
+            <strong>🔩 Para fazer 1 Parafuso Pequeno:</strong>
 
-    }
+            <div class="material">⚙️ 3x Barras de Ferro</div>
+            <div class="material">🩸 300x Sujo</div>
+        </div>
 
-
-    // =========================
-    // PARAFUSO PEQUENO
-    // =========================
-
-    else if (craft === "parafuso") {
-
-        const barraFerro = 3 * qtd;
-
-        const sujo = 300 * qtd;
-
-
-        html = `
-
-            <div class="titulo-resultado">
-                🔩 Parafuso Pequeno × ${formatar(qtd)}
-            </div>
-
-            <strong>Materiais necessários:</strong>
+        <div class="secao">
+            <strong>
+                📦 Total para ${formatar(p.parafusosPequenos)}
+                Parafusos Pequenos:
+            </strong>
 
             <div class="material">
-                ⚙️ Barra de Ferro:
-                <strong>${formatar(barraFerro)}x</strong>
+                ⚙️ Barras de Ferro:
+                <strong>${formatar(p.barraFerro)}x</strong>
             </div>
 
             <div class="material">
                 🩸 Sujo:
-                <strong>${formatar(sujo)}x</strong>
+                <strong>${formatar(p.sujoParafusos)}</strong>
+            </div>
+        </div>
+
+        <div class="secao">
+            <strong>🩸 Dinheiro Sujo Necessário</strong>
+
+            <div class="material">
+                Sujo das armas:
+                <strong>${formatar(p.sujoArmas)}</strong>
             </div>
 
-        `;
+            <div class="material">
+                Sujo das Peças de Arma Média:
+                <strong>${formatar(p.sujoPecas)}</strong>
+            </div>
 
-    }
-    // =========================
-// UZI
-// =========================
+            <div class="material">
+                Sujo dos Parafusos:
+                <strong>${formatar(p.sujoParafusos)}</strong>
+            </div>
 
-if (craft === "uzi") {
+            <br>
 
-    const sujo = 500 * qtd;
-    const pecaMedia = 2 * qtd;
-    const parafuso = 3 * qtd;
-
-    const valorLimpo = 40000 * qtd;
-    const valorSujo = 52000 * qtd;
-
-    html = `
-
-        <div class="titulo-resultado">
-            🔫 UZI × ${formatar(qtd)}
+            <div class="material">
+                <strong>
+                    🩸 TOTAL DE SUJO:
+                    ${formatar(p.sujoTotal)}
+                </strong>
+            </div>
         </div>
 
-        <strong>Materiais necessários:</strong>
+        <div class="secao">
+            <strong>💰 Total de Venda das Armas</strong>
 
-        <div class="material">
-            🩸 Sujo: <strong>${formatar(sujo)}x</strong>
+            <div class="material">
+                💵 Total Limpo:
+                <span class="valor">
+                    <strong>R$ ${formatar(valorTotalLimpo)}</strong>
+                </span>
+            </div>
+
+            <div class="material">
+                🩸 Total Sujo:
+                <span class="sujo">
+                    <strong>R$ ${formatar(valorTotalSujo)}</strong>
+                </span>
+            </div>
         </div>
-
-        <div class="material">
-            🛠️ Peças de Arma Média:
-            <strong>${formatar(pecaMedia)}x</strong>
-        </div>
-
-        <div class="material">
-            🔩 Parafusos Pequenos:
-            <strong>${formatar(parafuso)}x</strong>
-        </div>
-
-        <br>
-
-        <strong>💰 Valor da UZI:</strong>
-
-        <div class="material">
-            💵 Limpo:
-            <strong>R$ ${formatar(valorLimpo)}</strong>
-        </div>
-
-        <div class="material">
-            🩸 Sujo:
-            <strong>R$ ${formatar(valorSujo)}</strong>
-        </div>
-
     `;
-
-}
-
-
-// =========================
-// AUG
-// =========================
-
-else if (craft === "aug") {
-
-    const sujo = 500 * qtd;
-    const pecaMedia = 4 * qtd;
-    const parafuso = 3 * qtd;
-
-    const valorLimpo = 160000 * qtd;
-    const valorSujo = 208000 * qtd;
-
-    html = `
-
-        <div class="titulo-resultado">
-            🔫 AUG × ${formatar(qtd)}
-        </div>
-
-        <strong>Materiais necessários:</strong>
-
-        <div class="material">
-            🩸 Sujo: <strong>${formatar(sujo)}x</strong>
-        </div>
-
-        <div class="material">
-            🛠️ Peças de Arma Média:
-            <strong>${formatar(pecaMedia)}x</strong>
-        </div>
-
-        <div class="material">
-            🔩 Parafusos Pequenos:
-            <strong>${formatar(parafuso)}x</strong>
-        </div>
-
-        <br>
-
-        <strong>💰 Valor da AUG:</strong>
-
-        <div class="material">
-            💵 Limpo:
-            <strong>R$ ${formatar(valorLimpo)}</strong>
-        </div>
-
-        <div class="material">
-            🩸 Sujo:
-            <strong>R$ ${formatar(valorSujo)}</strong>
-        </div>
-
-    `;
-
-
-    const craftSelect = document.getElementById("craft");
-const qtdInput = document.getElementById("qtd");
-
-function atualizarCrafts() {
-
-    const craft = craftSelect.value;
-    const qtd = Number(qtdInput.value);
-
-    const caixa = document.getElementById("quantidadesCraft");
-    const pecasMedia = document.getElementById("pecasMedia");
-    const parafusos = document.getElementById("parafusos");
-
-    // Só aparece para UZI e AUG
-    if ((craft === "uzi" || craft === "aug") && qtd > 0) {
-
-        let quantidadeMedia = 0;
-        let quantidadeParafuso = 3 * qtd;
-
-        if (craft === "uzi") {
-            quantidadeMedia = 2 * qtd;
-        }
-
-        if (craft === "aug") {
-            quantidadeMedia = 4 * qtd;
-        }
-
-        pecasMedia.value =
-            `Peças de Arma Média: ${quantidadeMedia}x`;
-
-        parafusos.value =
-            `Parafusos Pequenos: ${quantidadeParafuso}x`;
-
-        caixa.style.display = "block";
-
-    } else {
-
-        caixa.style.display = "none";
-
-    }
-}
-
-craftSelect.addEventListener("change", atualizarCrafts);
-qtdInput.addEventListener("input", atualizarCrafts);
-}
-
-
-    resultado.innerHTML = html;
-
 }
 
 </script>

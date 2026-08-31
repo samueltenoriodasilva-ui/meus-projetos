@@ -27,6 +27,8 @@ Aqui estão alguns dos meus sites e testes hospedados gratuitamente no **GitHub 
 - [**droop food**](https://samueltenoriodasilva-ui.github.io/meus-projetos/droopfood/)
 
 - [**Maratona 3**](https://samueltenoriodasilva-ui.github.io/meus-projetos/maratuona-tec-2026/)
+
+- [**Maratona 3**](https://samueltenoriodasilva-ui.github.io/meus-projetos/projetos1.3/)
  ---
 ## 📌 Sobre o Repositório
 Este repositório serve como um **portfólio de sites** criados com **HTML, CSS e JavaScript**, publicados através do **GitHub Pages**.
